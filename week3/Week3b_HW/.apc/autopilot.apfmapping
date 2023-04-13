@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="lec6Ex2a.cpp" path="/afs/hep.wisc.edu/user/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week3/lec6Ex2a.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="lec6Ex2a_out_ref.dat" path="/afs/hep.wisc.edu/user/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week3/lec6Ex2a_out_ref.dat"/>
+    <originFiles name="lec6Ex2a_test.cpp" path="/afs/hep.wisc.edu/user/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week3/lec6Ex2a_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

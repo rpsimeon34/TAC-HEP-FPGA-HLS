@@ -1,0 +1,8 @@
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'rsimeon' on host 'cmstrigger02.hep.wisc.edu' (Linux_x86_64 version 5.4.238-1.el7.elrepo.x86_64) on Tue Apr 11 14:58:52 CDT 2023
+INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core)"
+INFO: [HLS 200-10] In directory '/afs/hep.wisc.edu/user/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week3/lec5Ex2_vhighboth/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_rsimeon/364571681243132504172
+INFO: [APCC 202-1] APCC is done.

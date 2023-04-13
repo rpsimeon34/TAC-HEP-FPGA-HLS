@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /afs/hep.wisc.edu/user/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week3/lec5Ex2_vhighsamples/solution1/./sim/autowrap/testbench/lec5Ex1.c_pre.c.tb.c

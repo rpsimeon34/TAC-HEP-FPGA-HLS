@@ -1,0 +1,21 @@
+   Build using "/opt/Xilinx/Vivado/2020.1/tps/lnx64/gcc-6.2.0/bin/g++"
+   Compiling apatb_lec5Ex1.cpp
+   Compiling (apcc) lec5Ex1_test_vhighN.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'rsimeon' on host 'cmstrigger02.hep.wisc.edu' (Linux_x86_64 version 5.4.238-1.el7.elrepo.x86_64) on Tue Apr 11 14:56:37 CDT 2023
+INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core)"
+INFO: [HLS 200-10] In directory '/afs/hep.wisc.edu/user/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week3/lec5Ex2_vhighN/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_rsimeon/340991681242997106819
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) lec5Ex1.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'rsimeon' on host 'cmstrigger02.hep.wisc.edu' (Linux_x86_64 version 5.4.238-1.el7.elrepo.x86_64) on Tue Apr 11 14:56:46 CDT 2023
+INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core)"
+INFO: [HLS 200-10] In directory '/afs/hep.wisc.edu/user/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week3/lec5Ex2_vhighN/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_rsimeon/344251681243006965568
+INFO: [APCC 202-1] APCC is done.
+   Generating cosim.tv.exe

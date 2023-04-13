@@ -1,5 +1,8 @@
 #include "lec6Ex2a.h"
 #include <stdlib.h>
+#include <iostream>
+#include <fstream>
+#include <string>
 
 int main () {
   FILE         *oFile;
@@ -21,7 +24,10 @@ int main () {
   }
   printf("--------------\n");
 
-  oFile=fopen("lec6Ex2a_out.dat","w");
+//  oFile=fopen("lec6Ex2a_out.dat","w");
+  std::ofstream out("lec6Ex2a_out.dat");
+  std::streambuf *coutbuf = std::cout.rdbuf();
+  std::cout.rdbuf(out.rdbuf());
 
   // Execute the function with latest input
   lec6Ex2a(input, a, b, c, output);
@@ -29,10 +35,12 @@ int main () {
   for(int i=0; i<MM; i++){
     for(int j=0; j<NN; j++){
       int k = j+i*NN;
-      fprintf(oFile,"%i %u %u\n",k,input[j],output[k]);
+      std::cout << k<<" "<<input[j]<<" "<<output[k]<<std::endl;
+//      fprintf(oFile,"%i %u %u\n",k,input[j],output[k]);
     }  
   }
-  fclose(oFile);
+  std::cout.rdbuf(coutbuf);
+//  fclose(oFile);
 
 printf ("Comparing against output data \n");
 if (system("diff -w lec6Ex2a_out.dat lec6Ex2a_out_ref.dat")) {

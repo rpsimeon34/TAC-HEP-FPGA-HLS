@@ -1,0 +1,100 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7k160t-fbg484-2'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'lec6Ex2a.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1775.270 ; gain = 1248.910 ; free physical = 78144 ; free virtual = 106778
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1775.270 ; gain = 1248.910 ; free physical = 78144 ; free virtual = 106778
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'squared' into 'lec6Ex2a' (lec6Ex2a.cpp:25).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1775.270 ; gain = 1248.910 ; free physical = 77990 ; free virtual = 106625
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1775.270 ; gain = 1248.910 ; free physical = 77985 ; free virtual = 106621
+INFO: [XFORM 203-101] Partitioning array 'in.V' (lec6Ex2a.cpp:4) in dimension 1 completely.
+WARNING: [XFORM 203-104] Completely partitioning array 'out.V' (lec6Ex2a.cpp:8) accessed through non-constant indices on dimension 1 (lec6Ex2a.cpp:26:6), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
+INFO: [XFORM 203-101] Partitioning array 'out.V' (lec6Ex2a.cpp:8) in dimension 1 completely.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1775.270 ; gain = 1248.910 ; free physical = 77997 ; free virtual = 106634
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1775.270 ; gain = 1248.910 ; free physical = 77939 ; free virtual = 106577
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'lec6Ex2a' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lec6Ex2a' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 32.61 seconds; current allocated memory: 167.150 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.3 seconds; current allocated memory: 168.709 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lec6Ex2a' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/in_0_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/in_1_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/in_2_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/in_3_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/in_4_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/in_5_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/in_6_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/in_7_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/in_8_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/in_9_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/in_10_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/in_11_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/in_12_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/in_13_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/in_14_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/in_15_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/in_16_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/in_17_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/in_18_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/in_19_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/in_20_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/in_21_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/in_22_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/in_23_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/in_24_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/in_25_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/in_26_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/in_27_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/in_28_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/in_29_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/a_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/b_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/c_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/out_0_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/out_1_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/out_2_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/out_3_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/out_4_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/out_5_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/out_6_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/out_7_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/out_8_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/out_9_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/out_10_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/out_11_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/out_12_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/out_13_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/out_14_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/out_15_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/out_16_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/out_17_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/out_18_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/out_19_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/out_20_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/out_21_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/out_22_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec6Ex2a/out_23_V' to 'ap_vld'.
+INFO: [RTGEN 206-500]

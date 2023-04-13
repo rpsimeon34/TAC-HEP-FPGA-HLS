@@ -1,0 +1,597 @@
+
+
+================================================================
+== Vivado HLS Report for 'lec6Ex2a'
+================================================================
+* Date:           Thu Apr 13 17:32:42 2023
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        Week3b_HW
+* Solution:       solution1
+* Product family: kintex7
+* Target device:  xc7k160t-fbg484-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 8.211 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       97|       97| 0.970 us | 0.970 us |   97|   97|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------+---------+---------+----------+-----------+-----------+------+----------+
+        |           |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop_j   |       96|       96|        32|          -|          -|     3|    no    |
+        | + Loop_i  |       30|       30|         1|          -|          -|    30|    no    |
+        +-----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 3 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.87>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_89_V), !map !85"   --->   Operation 4 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_88_V), !map !91"   --->   Operation 5 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_87_V), !map !97"   --->   Operation 6 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_86_V), !map !103"   --->   Operation 7 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_85_V), !map !109"   --->   Operation 8 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_84_V), !map !115"   --->   Operation 9 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_83_V), !map !121"   --->   Operation 10 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_82_V), !map !127"   --->   Operation 11 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_81_V), !map !133"   --->   Operation 12 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_80_V), !map !139"   --->   Operation 13 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_79_V), !map !145"   --->   Operation 14 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_78_V), !map !151"   --->   Operation 15 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_77_V), !map !157"   --->   Operation 16 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_76_V), !map !163"   --->   Operation 17 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_75_V), !map !169"   --->   Operation 18 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_74_V), !map !175"   --->   Operation 19 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_73_V), !map !181"   --->   Operation 20 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_72_V), !map !187"   --->   Operation 21 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_71_V), !map !193"   --->   Operation 22 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_70_V), !map !199"   --->   Operation 23 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_69_V), !map !205"   --->   Operation 24 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_68_V), !map !211"   --->   Operation 25 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_67_V), !map !217"   --->   Operation 26 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_66_V), !map !223"   --->   Operation 27 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_65_V), !map !229"   --->   Operation 28 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_64_V), !map !235"   --->   Operation 29 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_63_V), !map !241"   --->   Operation 30 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_62_V), !map !247"   --->   Operation 31 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_61_V), !map !253"   --->   Operation 32 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_60_V), !map !259"   --->   Operation 33 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_59_V), !map !265"   --->   Operation 34 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_58_V), !map !271"   --->   Operation 35 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_57_V), !map !277"   --->   Operation 36 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_56_V), !map !283"   --->   Operation 37 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_55_V), !map !289"   --->   Operation 38 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_54_V), !map !295"   --->   Operation 39 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_53_V), !map !301"   --->   Operation 40 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_52_V), !map !307"   --->   Operation 41 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_51_V), !map !313"   --->   Operation 42 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_50_V), !map !319"   --->   Operation 43 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_49_V), !map !325"   --->   Operation 44 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_48_V), !map !331"   --->   Operation 45 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_47_V), !map !337"   --->   Operation 46 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_46_V), !map !343"   --->   Operation 47 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_45_V), !map !349"   --->   Operation 48 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_44_V), !map !355"   --->   Operation 49 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_43_V), !map !361"   --->   Operation 50 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_42_V), !map !367"   --->   Operation 51 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_41_V), !map !373"   --->   Operation 52 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_40_V), !map !379"   --->   Operation 53 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_39_V), !map !385"   --->   Operation 54 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_38_V), !map !391"   --->   Operation 55 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_37_V), !map !397"   --->   Operation 56 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_36_V), !map !403"   --->   Operation 57 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_35_V), !map !409"   --->   Operation 58 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_34_V), !map !415"   --->   Operation 59 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_33_V), !map !421"   --->   Operation 60 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_32_V), !map !427"   --->   Operation 61 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_31_V), !map !433"   --->   Operation 62 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_30_V), !map !439"   --->   Operation 63 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_29_V), !map !445"   --->   Operation 64 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_28_V), !map !451"   --->   Operation 65 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_27_V), !map !457"   --->   Operation 66 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_26_V), !map !463"   --->   Operation 67 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_25_V), !map !469"   --->   Operation 68 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_24_V), !map !475"   --->   Operation 69 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_23_V), !map !481"   --->   Operation 70 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_22_V), !map !487"   --->   Operation 71 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_21_V), !map !493"   --->   Operation 72 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_20_V), !map !499"   --->   Operation 73 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_19_V), !map !505"   --->   Operation 74 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_18_V), !map !511"   --->   Operation 75 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_17_V), !map !517"   --->   Operation 76 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_16_V), !map !523"   --->   Operation 77 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_15_V), !map !529"   --->   Operation 78 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_14_V), !map !535"   --->   Operation 79 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_13_V), !map !541"   --->   Operation 80 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_12_V), !map !547"   --->   Operation 81 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_11_V), !map !553"   --->   Operation 82 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_10_V), !map !559"   --->   Operation 83 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_9_V), !map !565"   --->   Operation 84 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_8_V), !map !571"   --->   Operation 85 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_7_V), !map !577"   --->   Operation 86 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_6_V), !map !583"   --->   Operation 87 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 88 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_5_V), !map !589"   --->   Operation 88 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_4_V), !map !595"   --->   Operation 89 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 90 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_3_V), !map !601"   --->   Operation 90 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 91 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_2_V), !map !607"   --->   Operation 91 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_1_V), !map !613"   --->   Operation 92 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 93 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_0_V), !map !619"   --->   Operation 93 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 94 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %in_29_V), !map !625"   --->   Operation 94 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 95 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %in_28_V), !map !629"   --->   Operation 95 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 96 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %in_27_V), !map !633"   --->   Operation 96 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 97 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %in_26_V), !map !637"   --->   Operation 97 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 98 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %in_25_V), !map !641"   --->   Operation 98 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 99 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %in_24_V), !map !645"   --->   Operation 99 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 100 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %in_23_V), !map !649"   --->   Operation 100 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 101 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %in_22_V), !map !653"   --->   Operation 101 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 102 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %in_21_V), !map !657"   --->   Operation 102 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 103 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %in_20_V), !map !661"   --->   Operation 103 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 104 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %in_19_V), !map !665"   --->   Operation 104 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 105 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %in_18_V), !map !669"   --->   Operation 105 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 106 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %in_17_V), !map !673"   --->   Operation 106 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 107 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %in_16_V), !map !677"   --->   Operation 107 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 108 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %in_15_V), !map !681"   --->   Operation 108 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 109 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %in_14_V), !map !685"   --->   Operation 109 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 110 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %in_13_V), !map !689"   --->   Operation 110 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 111 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %in_12_V), !map !693"   --->   Operation 111 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 112 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %in_11_V), !map !697"   --->   Operation 112 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 113 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %in_10_V), !map !701"   --->   Operation 113 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 114 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %in_9_V), !map !705"   --->   Operation 114 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 115 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %in_8_V), !map !709"   --->   Operation 115 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 116 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %in_7_V), !map !713"   --->   Operation 116 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 117 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %in_6_V), !map !717"   --->   Operation 117 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 118 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %in_5_V), !map !721"   --->   Operation 118 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 119 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %in_4_V), !map !725"   --->   Operation 119 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 120 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %in_3_V), !map !729"   --->   Operation 120 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 121 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %in_2_V), !map !733"   --->   Operation 121 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 122 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %in_1_V), !map !737"   --->   Operation 122 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 123 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %in_0_V), !map !741"   --->   Operation 123 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 124 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i2 %a_V), !map !745"   --->   Operation 124 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 125 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i2 %b_V), !map !751"   --->   Operation 125 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 126 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i2 %c_V), !map !755"   --->   Operation 126 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 127 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([9 x i8]* @lec6Ex2a_str) nounwind"   --->   Operation 127 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 128 [1/1] (0.00ns)   --->   "%c_V_read = call i2 @_ssdm_op_Read.ap_auto.i2(i2 %c_V)" [lec6Ex2a.cpp:4]   --->   Operation 128 'read' 'c_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 129 [1/1] (0.00ns)   --->   "%b_V_read = call i2 @_ssdm_op_Read.ap_auto.i2(i2 %b_V)" [lec6Ex2a.cpp:4]   --->   Operation 129 'read' 'b_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 130 [1/1] (0.00ns)   --->   "%a_V_read = call i2 @_ssdm_op_Read.ap_auto.i2(i2 %a_V)" [lec6Ex2a.cpp:4]   --->   Operation 130 'read' 'a_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 131 [1/1] (0.00ns)   --->   "%zext_ln209 = zext i2 %b_V_read to i8" [lec6Ex2a.cpp:19]   --->   Operation 131 'zext' 'zext_ln209' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 132 [1/1] (0.00ns)   --->   "%zext_ln209_1 = zext i2 %a_V_read to i8" [lec6Ex2a.cpp:25]   --->   Operation 132 'zext' 'zext_ln209_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 133 [1/1] (0.00ns)   --->   "%zext_ln209_2 = zext i2 %c_V_read to i4" [lec6Ex2a.cpp:35->lec6Ex2a.cpp:25]   --->   Operation 133 'zext' 'zext_ln209_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 134 [1/1] (0.65ns)   --->   "%mul_ln209_1 = mul i4 %zext_ln209_2, %zext_ln209_2" [lec6Ex2a.cpp:35->lec6Ex2a.cpp:25]   --->   Operation 134 'mul' 'mul_ln209_1' <Predicate = true> <Delay = 0.65> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 135 [1/1] (0.00ns)   --->   "%zext_ln209_3 = zext i4 %mul_ln209_1 to i8" [lec6Ex2a.cpp:35->lec6Ex2a.cpp:25]   --->   Operation 135 'zext' 'zext_ln209_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 136 [1/1] (0.87ns)   --->   "br label %1" [lec6Ex2a.cpp:17]   --->   Operation 136 'br' <Predicate = true> <Delay = 0.87>
+
+State 2 <SV = 1> <Delay = 3.58>
+ST_2 : Operation 137 [1/1] (0.00ns)   --->   "%t_V = phi i2 [ 0, %0 ], [ %j_V, %Loop_j_end ]"   --->   Operation 137 'phi' 't_V' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 138 [1/1] (0.50ns)   --->   "%icmp_ln887 = icmp eq i2 %t_V, -1" [lec6Ex2a.cpp:17]   --->   Operation 138 'icmp' 'icmp_ln887' <Predicate = true> <Delay = 0.50> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 139 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3)"   --->   Operation 139 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 140 [1/1] (0.85ns)   --->   "%j_V = add i2 %t_V, 1" [lec6Ex2a.cpp:17]   --->   Operation 140 'add' 'j_V' <Predicate = true> <Delay = 0.85> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.35> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 141 [1/1] (0.00ns)   --->   "br i1 %icmp_ln887, label %5, label %Loop_j_begin" [lec6Ex2a.cpp:17]   --->   Operation 141 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 142 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([7 x i8]* @p_str2) nounwind" [lec6Ex2a.cpp:17]   --->   Operation 142 'specloopname' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_2 : Operation 143 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([7 x i8]* @p_str2)" [lec6Ex2a.cpp:17]   --->   Operation 143 'specregionbegin' 'tmp' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_2 : Operation 144 [1/1] (0.00ns)   --->   "%in_0_V_read = call i8 @_ssdm_op_Read.ap_auto.i8P(i8* %in_0_V)" [lec6Ex2a.cpp:24]   --->   Operation 144 'read' 'in_0_V_read' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_2 : Operation 145 [1/1] (0.00ns)   --->   "%in_1_V_read = call i8 @_ssdm_op_Read.ap_auto.i8P(i8* %in_1_V)" [lec6Ex2a.cpp:24]   --->   Operation 145 'read' 'in_1_V_read' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_2 : Operation 146 [1/1] (0.00ns)   --->   "%in_2_V_read = call i8 @_ssdm_op_Read.ap_auto.i8P(i8* %in_2_V)" [lec6Ex2a.cpp:24]   --->   Operation 146 'read' 'in_2_V_read' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_2 : Operation 147 [1/1] (0.00ns)   --->   "%in_3_V_read = call i8 @_ssdm_op_Read.ap_auto.i8P(i8* %in_3_V)" [lec6Ex2a.cpp:24]   --->   Operation 147 'read' 'in_3_V_read' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_2 : Operation 148 [1/1] (0.88ns)   --->   "%phi_ln = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %in_0_V_read, i8 %in_1_V_read, i8 %in_2_V_read, i8 %in_3_V_read, i2 %t_V)" [lec6Ex2a.cpp:19]   --->   Operation 148 'mux' 'phi_ln' <Predicate = (!icmp_ln887)> <Delay = 0.88> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.76> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 149 [1/1] (2.70ns)   --->   "%tmp_V = mul i8 %zext_ln209, %phi_ln" [lec6Ex2a.cpp:19]   --->   Operation 149 'mul' 'tmp_V' <Predicate = (!icmp_ln887)> <Delay = 2.70> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 150 [1/1] (0.00ns)   --->   "%shl_ln = call i7 @_ssdm_op_BitConcatenate.i7.i2.i5(i2 %t_V, i5 0)" [lec6Ex2a.cpp:23]   --->   Operation 150 'bitconcatenate' 'shl_ln' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_2 : Operation 151 [1/1] (0.00ns)   --->   "%shl_ln214_1 = call i3 @_ssdm_op_BitConcatenate.i3.i2.i1(i2 %t_V, i1 false)" [lec6Ex2a.cpp:23]   --->   Operation 151 'bitconcatenate' 'shl_ln214_1' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_2 : Operation 152 [1/1] (0.00ns)   --->   "%zext_ln214 = zext i3 %shl_ln214_1 to i7" [lec6Ex2a.cpp:23]   --->   Operation 152 'zext' 'zext_ln214' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_2 : Operation 153 [1/1] (1.27ns)   --->   "%sub_ln214 = sub i7 %shl_ln, %zext_ln214" [lec6Ex2a.cpp:23]   --->   Operation 153 'sub' 'sub_ln214' <Predicate = (!icmp_ln887)> <Delay = 1.27> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.35> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 154 [1/1] (0.87ns)   --->   "br label %2" [lec6Ex2a.cpp:21]   --->   Operation 154 'br' <Predicate = (!icmp_ln887)> <Delay = 0.87>
+ST_2 : Operation 155 [1/1] (0.00ns)   --->   "ret void" [lec6Ex2a.cpp:29]   --->   Operation 155 'ret' <Predicate = (icmp_ln887)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 8.21>
+ST_3 : Operation 156 [1/1] (0.00ns)   --->   "%t_V_1 = phi i5 [ 0, %Loop_j_begin ], [ %i_V, %4 ]"   --->   Operation 156 'phi' 't_V_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 157 [1/1] (0.88ns)   --->   "%icmp_ln887_1 = icmp eq i5 %t_V_1, -2" [lec6Ex2a.cpp:21]   --->   Operation 157 'icmp' 'icmp_ln887_1' <Predicate = true> <Delay = 0.88> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 158 [1/1] (0.00ns)   --->   "%empty_2 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 30, i64 30, i64 30)"   --->   Operation 158 'speclooptripcount' 'empty_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 159 [1/1] (1.10ns)   --->   "%i_V = add i5 %t_V_1, 1" [lec6Ex2a.cpp:21]   --->   Operation 159 'add' 'i_V' <Predicate = true> <Delay = 1.10> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.35> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 160 [1/1] (0.00ns)   --->   "br i1 %icmp_ln887_1, label %Loop_j_end, label %3" [lec6Ex2a.cpp:21]   --->   Operation 160 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 161 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([7 x i8]* @p_str3) nounwind" [lec6Ex2a.cpp:21]   --->   Operation 161 'specloopname' <Predicate = (!icmp_ln887_1)> <Delay = 0.00>
+ST_3 : Operation 162 [1/1] (0.00ns)   --->   "%zext_ln214_1 = zext i5 %t_V_1 to i7" [lec6Ex2a.cpp:23]   --->   Operation 162 'zext' 'zext_ln214_1' <Predicate = (!icmp_ln887_1)> <Delay = 0.00>
+ST_3 : Operation 163 [1/1] (1.27ns)   --->   "%k_V = add i7 %sub_ln214, %zext_ln214_1" [lec6Ex2a.cpp:23]   --->   Operation 163 'add' 'k_V' <Predicate = (!icmp_ln887_1)> <Delay = 1.27> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.35> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 164 [1/1] (0.00ns)   --->   "%in_4_V_read = call i8 @_ssdm_op_Read.ap_auto.i8P(i8* %in_4_V)" [lec6Ex2a.cpp:24]   --->   Operation 164 'read' 'in_4_V_read' <Predicate = (!icmp_ln887_1)> <Delay = 0.00>
+ST_3 : Operation 165 [1/1] (0.00ns)   --->   "%in_5_V_read = call i8 @_ssdm_op_Read.ap_auto.i8P(i8* %in_5_V)" [lec6Ex2a.cpp:24]   --->   Operation 165 'read' 'in_5_V_read' <Predicate = (!icmp_ln887_1)> <Delay = 0.00>
+ST_3 : Operation 166 [1/1] (0.00ns)   --->   "%in_6_V_read = call i8 @_ssdm_op_Read.ap_auto.i8P(i8* %in_6_V)" [lec6Ex2a.cpp:24]   --->   Operation 166 'read' 'in_6_V_read' <Predicate = (!icmp_ln887_1)> <Delay = 0.00>
+ST_3 : Operation 167 [1/1] (0.00ns)   --->   "%in_7_V_read = call i8 @_ssdm_op_Read.ap_auto.i8P(i8* %in_7_V)" [lec6Ex2a.cpp:24]   --->   Operation 167 'read' 'in_7_V_read' <Predicate = (!icmp_ln887_1)> <Delay = 0.00>
+ST_3 : Operation 168 [1/1] (0.00ns)   --->   "%in_8_V_read = call i8 @_ssdm_op_Read.ap_auto.i8P(i8* %in_8_V)" [lec6Ex2a.cpp:24]   --->   Operation 168 'read' 'in_8_V_read' <Predicate = (!icmp_ln887_1)> <Delay = 0.00>
+ST_3 : Operation 169 [1/1] (0.00ns)   --->   "%in_9_V_read = call i8 @_ssdm_op_Read.ap_auto.i8P(i8* %in_9_V)" [lec6Ex2a.cpp:24]   --->   Operation 169 'read' 'in_9_V_read' <Predicate = (!icmp_ln887_1)> <Delay = 0.00>
+ST_3 : Operation 170 [1/1] (0.00ns)   --->   "%in_10_V_read = call i8 @_ssdm_op_Read.ap_auto.i8P(i8* %in_10_V)" [lec6Ex2a.cpp:24]   --->   Operation 170 'read' 'in_10_V_read' <Predicate = (!icmp_ln887_1)> <Delay = 0.00>
+ST_3 : Operation 171 [1/1] (0.00ns)   --->   "%in_11_V_read = call i8 @_ssdm_op_Read.ap_auto.i8P(i8* %in_11_V)" [lec6Ex2a.cpp:24]   --->   Operation 171 'read' 'in_11_V_read' <Predicate = (!icmp_ln887_1)> <Delay = 0.00>
+ST_3 : Operation 172 [1/1] (0.00ns)   --->   "%in_12_V_read = call i8 @_ssdm_op_Read.ap_auto.i8P(i8* %in_12_V)" [lec6Ex2a.cpp:24]   --->   Operation 172 'read' 'in_12_V_read' <Predicate = (!icmp_ln887_1)> <Delay = 0.00>
+ST_3 : Operation 173 [1/1] (0.00ns)   --->   "%in_13_V_read = call i8 @_ssdm_op_Read.ap_auto.i8P(i8* %in_13_V)" [lec6Ex2a.cpp:24]   --->   Operation 173 'read' 'in_13_V_read' <Predicate = (!icmp_ln887_1)> <Delay = 0.00>
+ST_3 : Operation 174 [1/1] (0.00ns)   --->   "%in_14_V_read = call i8 @_ssdm_op_Read.ap_auto.i8P(i8* %in_14_V)" [lec6Ex2a.cpp:24]   --->   Operation 174 'read' 'in_14_V_read' <Predicate = (!icmp_ln887_1)> <Delay = 0.00>
+ST_3 : Operation 175 [1/1] (0.00ns)   --->   "%in_15_V_read = call i8 @_ssdm_op_Read.ap_auto.i8P(i8* %in_15_V)" [lec6Ex2a.cpp:24]   --->   Operation 175 'read' 'in_15_V_read' <Predicate = (!icmp_ln887_1)> <Delay = 0.00>
+ST_3 : Operation 176 [1/1] (0.00ns)   --->   "%in_16_V_read = call i8 @_ssdm_op_Read.ap_auto.i8P(i8* %in_16_V)" [lec6Ex2a.cpp:24]   --->   Operation 176 'read' 'in_16_V_read' <Predicate = (!icmp_ln887_1)> <Delay = 0.00>
+ST_3 : Operation 177 [1/1] (0.00ns)   --->   "%in_17_V_read = call i8 @_ssdm_op_Read.ap_auto.i8P(i8* %in_17_V)" [lec6Ex2a.cpp:24]   --->   Operation 177 'read' 'in_17_V_read' <Predicate = (!icmp_ln887_1)> <Delay = 0.00>
+ST_3 : Operation 178 [1/1] (0.00ns)   --->   "%in_18_V_read = call i8 @_ssdm_op_Read.ap_auto.i8P(i8* %in_18_V)" [lec6Ex2a.cpp:24]   --->   Operation 178 'read' 'in_18_V_read' <Predicate = (!icmp_ln887_1)> <Delay = 0.00>
+ST_3 : Operation 179 [1/1] (0.00ns)   --->   "%in_19_V_read = call i8 @_ssdm_op_Read.ap_auto.i8P(i8* %in_19_V)" [lec6Ex2a.cpp:24]   --->   Operation 179 'read' 'in_19_V_read' <Predicate = (!icmp_ln887_1)> <Delay = 0.00>
+ST_3 : Operation 180 [1/1] (0.00ns)   --->   "%in_20_V_read = call i8 @_ssdm_op_Read.ap_auto.i8P(i8* %in_20_V)" [lec6Ex2a.cpp:24]   --->   Operation 180 'read' 'in_20_V_read' <Predicate = (!icmp_ln887_1)> <Delay = 0.00>
+ST_3 : Operation 181 [1/1] (0.00ns)   --->   "%in_21_V_read = call i8 @_ssdm_op_Read.ap_auto.i8P(i8* %in_21_V)" [lec6Ex2a.cpp:24]   --->   Operation 181 'read' 'in_21_V_read' <Predicate = (!icmp_ln887_1)> <Delay = 0.00>
+ST_3 : Operation 182 [1/1] (0.00ns)   --->   "%in_22_V_read = call i8 @_ssdm_op_Read.ap_auto.i8P(i8* %in_22_V)" [lec6Ex2a.cpp:24]   --->   Operation 182 'read' 'in_22_V_read' <Predicate = (!icmp_ln887_1)> <Delay = 0.00>
+ST_3 : Operation 183 [1/1] (0.00ns)   --->   "%in_23_V_read = call i8 @_ssdm_op_Read.ap_auto.i8P(i8* %in_23_V)" [lec6Ex2a.cpp:24]   --->   Operation 183 'read' 'in_23_V_read' <Predicate = (!icmp_ln887_1)> <Delay = 0.00>
+ST_3 : Operation 184 [1/1] (0.00ns)   --->   "%in_24_V_read = call i8 @_ssdm_op_Read.ap_auto.i8P(i8* %in_24_V)" [lec6Ex2a.cpp:24]   --->   Operation 184 'read' 'in_24_V_read' <Predicate = (!icmp_ln887_1)> <Delay = 0.00>
+ST_3 : Operation 185 [1/1] (0.00ns)   --->   "%in_25_V_read = call i8 @_ssdm_op_Read.ap_auto.i8P(i8* %in_25_V)" [lec6Ex2a.cpp:24]   --->   Operation 185 'read' 'in_25_V_read' <Predicate = (!icmp_ln887_1)> <Delay = 0.00>
+ST_3 : Operation 186 [1/1] (0.00ns)   --->   "%in_26_V_read = call i8 @_ssdm_op_Read.ap_auto.i8P(i8* %in_26_V)" [lec6Ex2a.cpp:24]   --->   Operation 186 'read' 'in_26_V_read' <Predicate = (!icmp_ln887_1)> <Delay = 0.00>
+ST_3 : Operation 187 [1/1] (0.00ns)   --->   "%in_27_V_read = call i8 @_ssdm_op_Read.ap_auto.i8P(i8* %in_27_V)" [lec6Ex2a.cpp:24]   --->   Operation 187 'read' 'in_27_V_read' <Predicate = (!icmp_ln887_1)> <Delay = 0.00>
+ST_3 : Operation 188 [1/1] (0.00ns)   --->   "%in_28_V_read = call i8 @_ssdm_op_Read.ap_auto.i8P(i8* %in_28_V)" [lec6Ex2a.cpp:24]   --->   Operation 188 'read' 'in_28_V_read' <Predicate = (!icmp_ln887_1)> <Delay = 0.00>
+ST_3 : Operation 189 [1/1] (0.00ns)   --->   "%in_29_V_read = call i8 @_ssdm_op_Read.ap_auto.i8P(i8* %in_29_V)" [lec6Ex2a.cpp:24]   --->   Operation 189 'read' 'in_29_V_read' <Predicate = (!icmp_ln887_1)> <Delay = 0.00>
+ST_3 : Operation 190 [1/1] (1.76ns)   --->   "%x_V = call i8 @_ssdm_op_Mux.ap_auto.30i8.i5(i8 %in_0_V_read, i8 %in_1_V_read, i8 %in_2_V_read, i8 %in_3_V_read, i8 %in_4_V_read, i8 %in_5_V_read, i8 %in_6_V_read, i8 %in_7_V_read, i8 %in_8_V_read, i8 %in_9_V_read, i8 %in_10_V_read, i8 %in_11_V_read, i8 %in_12_V_read, i8 %in_13_V_read, i8 %in_14_V_read, i8 %in_15_V_read, i8 %in_16_V_read, i8 %in_17_V_read, i8 %in_18_V_read, i8 %in_19_V_read, i8 %in_20_V_read, i8 %in_21_V_read, i8 %in_22_V_read, i8 %in_23_V_read, i8 %in_24_V_read, i8 %in_25_V_read, i8 %in_26_V_read, i8 %in_27_V_read, i8 %in_28_V_read, i8 %in_29_V_read, i5 %t_V_1)" [lec6Ex2a.cpp:24]   --->   Operation 190 'mux' 'x_V' <Predicate = (!icmp_ln887_1)> <Delay = 1.76> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.76> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 191 [1/1] (2.39ns) (grouped into DSP with root node add_ln209)   --->   "%mul_ln209 = mul i8 %x_V, %zext_ln209_1" [lec6Ex2a.cpp:25]   --->   Operation 191 'mul' 'mul_ln209' <Predicate = (!icmp_ln887_1)> <Delay = 2.39> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 5.09> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 192 [1/1] (2.70ns) (root node of the DSP)   --->   "%add_ln209 = add i8 %tmp_V, %mul_ln209" [lec6Ex2a.cpp:25]   --->   Operation 192 'add' 'add_ln209' <Predicate = (!icmp_ln887_1)> <Delay = 2.70> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 5.09> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 193 [1/1] (1.35ns)   --->   "%y_V = add i8 %add_ln209, %zext_ln209_3" [lec6Ex2a.cpp:25]   --->   Operation 193 'add' 'y_V' <Predicate = (!icmp_ln887_1)> <Delay = 1.35> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.35> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 194 [1/1] (0.94ns)   --->   "switch i7 %k_V, label %branch89 [
+    i7 0, label %branch0150
+    i7 1, label %branch1151
+    i7 2, label %branch2152
+    i7 3, label %branch3153
+    i7 4, label %branch4154
+    i7 5, label %branch5155
+    i7 6, label %branch6156
+    i7 7, label %branch7157
+    i7 8, label %branch8158
+    i7 9, label %branch9159
+    i7 10, label %branch10160
+    i7 11, label %branch11161
+    i7 12, label %branch12162
+    i7 13, label %branch13163
+    i7 14, label %branch14164
+    i7 15, label %branch15165
+    i7 16, label %branch16166
+    i7 17, label %branch17167
+    i7 18, label %branch18168
+    i7 19, label %branch19169
+    i7 20, label %branch20170
+    i7 21, label %branch21171
+    i7 22, label %branch22172
+    i7 23, label %branch23173
+    i7 24, label %branch24174
+    i7 25, label %branch25175
+    i7 26, label %branch26176
+    i7 27, label %branch27177
+    i7 28, label %branch28178
+    i7 29, label %branch29179
+    i7 30, label %branch30
+    i7 31, label %branch31
+    i7 32, label %branch32
+    i7 33, label %branch33
+    i7 34, label %branch34
+    i7 35, label %branch35
+    i7 36, label %branch36
+    i7 37, label %branch37
+    i7 38, label %branch38
+    i7 39, label %branch39
+    i7 40, label %branch40
+    i7 41, label %branch41
+    i7 42, label %branch42
+    i7 43, label %branch43
+    i7 44, label %branch44
+    i7 45, label %branch45
+    i7 46, label %branch46
+    i7 47, label %branch47
+    i7 48, label %branch48
+    i7 49, label %branch49
+    i7 50, label %branch50
+    i7 51, label %branch51
+    i7 52, label %branch52
+    i7 53, label %branch53
+    i7 54, label %branch54
+    i7 55, label %branch55
+    i7 56, label %branch56
+    i7 57, label %branch57
+    i7 58, label %branch58
+    i7 59, label %branch59
+    i7 60, label %branch60
+    i7 61, label %branch61
+    i7 62, label %branch62
+    i7 63, label %branch63
+    i7 -64, label %branch64
+    i7 -63, label %branch65
+    i7 -62, label %branch66
+    i7 -61, label %branch67
+    i7 -60, label %branch68
+    i7 -59, label %branch69
+    i7 -58, label %branch70
+    i7 -57, label %branch71
+    i7 -56, label %branch72
+    i7 -55, label %branch73
+    i7 -54, label %branch74
+    i7 -53, label %branch75
+    i7 -52, label %branch76
+    i7 -51, label %branch77
+    i7 -50, label %branch78
+    i7 -49, label %branch79
+    i7 -48, label %branch80
+    i7 -47, label %branch81
+    i7 -46, label %branch82
+    i7 -45, label %branch83
+    i7 -44, label %branch84
+    i7 -43, label %branch85
+    i7 -42, label %branch86
+    i7 -41, label %branch87
+    i7 -40, label %branch88
+  ]" [lec6Ex2a.cpp:26]   --->   Operation 194 'switch' <Predicate = (!icmp_ln887_1)> <Delay = 0.94>
+ST_3 : Operation 195 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_88_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 195 'write' <Predicate = (!icmp_ln887_1 & k_V == 88)> <Delay = 0.00>
+ST_3 : Operation 196 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 196 'br' <Predicate = (!icmp_ln887_1 & k_V == 88)> <Delay = 0.00>
+ST_3 : Operation 197 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_87_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 197 'write' <Predicate = (!icmp_ln887_1 & k_V == 87)> <Delay = 0.00>
+ST_3 : Operation 198 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 198 'br' <Predicate = (!icmp_ln887_1 & k_V == 87)> <Delay = 0.00>
+ST_3 : Operation 199 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_86_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 199 'write' <Predicate = (!icmp_ln887_1 & k_V == 86)> <Delay = 0.00>
+ST_3 : Operation 200 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 200 'br' <Predicate = (!icmp_ln887_1 & k_V == 86)> <Delay = 0.00>
+ST_3 : Operation 201 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_85_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 201 'write' <Predicate = (!icmp_ln887_1 & k_V == 85)> <Delay = 0.00>
+ST_3 : Operation 202 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 202 'br' <Predicate = (!icmp_ln887_1 & k_V == 85)> <Delay = 0.00>
+ST_3 : Operation 203 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_84_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 203 'write' <Predicate = (!icmp_ln887_1 & k_V == 84)> <Delay = 0.00>
+ST_3 : Operation 204 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 204 'br' <Predicate = (!icmp_ln887_1 & k_V == 84)> <Delay = 0.00>
+ST_3 : Operation 205 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_83_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 205 'write' <Predicate = (!icmp_ln887_1 & k_V == 83)> <Delay = 0.00>
+ST_3 : Operation 206 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 206 'br' <Predicate = (!icmp_ln887_1 & k_V == 83)> <Delay = 0.00>
+ST_3 : Operation 207 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_82_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 207 'write' <Predicate = (!icmp_ln887_1 & k_V == 82)> <Delay = 0.00>
+ST_3 : Operation 208 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 208 'br' <Predicate = (!icmp_ln887_1 & k_V == 82)> <Delay = 0.00>
+ST_3 : Operation 209 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_81_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 209 'write' <Predicate = (!icmp_ln887_1 & k_V == 81)> <Delay = 0.00>
+ST_3 : Operation 210 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 210 'br' <Predicate = (!icmp_ln887_1 & k_V == 81)> <Delay = 0.00>
+ST_3 : Operation 211 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_80_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 211 'write' <Predicate = (!icmp_ln887_1 & k_V == 80)> <Delay = 0.00>
+ST_3 : Operation 212 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 212 'br' <Predicate = (!icmp_ln887_1 & k_V == 80)> <Delay = 0.00>
+ST_3 : Operation 213 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_79_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 213 'write' <Predicate = (!icmp_ln887_1 & k_V == 79)> <Delay = 0.00>
+ST_3 : Operation 214 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 214 'br' <Predicate = (!icmp_ln887_1 & k_V == 79)> <Delay = 0.00>
+ST_3 : Operation 215 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_78_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 215 'write' <Predicate = (!icmp_ln887_1 & k_V == 78)> <Delay = 0.00>
+ST_3 : Operation 216 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 216 'br' <Predicate = (!icmp_ln887_1 & k_V == 78)> <Delay = 0.00>
+ST_3 : Operation 217 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_77_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 217 'write' <Predicate = (!icmp_ln887_1 & k_V == 77)> <Delay = 0.00>
+ST_3 : Operation 218 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 218 'br' <Predicate = (!icmp_ln887_1 & k_V == 77)> <Delay = 0.00>
+ST_3 : Operation 219 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_76_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 219 'write' <Predicate = (!icmp_ln887_1 & k_V == 76)> <Delay = 0.00>
+ST_3 : Operation 220 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 220 'br' <Predicate = (!icmp_ln887_1 & k_V == 76)> <Delay = 0.00>
+ST_3 : Operation 221 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_75_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 221 'write' <Predicate = (!icmp_ln887_1 & k_V == 75)> <Delay = 0.00>
+ST_3 : Operation 222 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 222 'br' <Predicate = (!icmp_ln887_1 & k_V == 75)> <Delay = 0.00>
+ST_3 : Operation 223 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_74_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 223 'write' <Predicate = (!icmp_ln887_1 & k_V == 74)> <Delay = 0.00>
+ST_3 : Operation 224 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 224 'br' <Predicate = (!icmp_ln887_1 & k_V == 74)> <Delay = 0.00>
+ST_3 : Operation 225 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_73_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 225 'write' <Predicate = (!icmp_ln887_1 & k_V == 73)> <Delay = 0.00>
+ST_3 : Operation 226 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 226 'br' <Predicate = (!icmp_ln887_1 & k_V == 73)> <Delay = 0.00>
+ST_3 : Operation 227 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_72_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 227 'write' <Predicate = (!icmp_ln887_1 & k_V == 72)> <Delay = 0.00>
+ST_3 : Operation 228 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 228 'br' <Predicate = (!icmp_ln887_1 & k_V == 72)> <Delay = 0.00>
+ST_3 : Operation 229 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_71_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 229 'write' <Predicate = (!icmp_ln887_1 & k_V == 71)> <Delay = 0.00>
+ST_3 : Operation 230 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 230 'br' <Predicate = (!icmp_ln887_1 & k_V == 71)> <Delay = 0.00>
+ST_3 : Operation 231 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_70_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 231 'write' <Predicate = (!icmp_ln887_1 & k_V == 70)> <Delay = 0.00>
+ST_3 : Operation 232 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 232 'br' <Predicate = (!icmp_ln887_1 & k_V == 70)> <Delay = 0.00>
+ST_3 : Operation 233 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_69_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 233 'write' <Predicate = (!icmp_ln887_1 & k_V == 69)> <Delay = 0.00>
+ST_3 : Operation 234 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 234 'br' <Predicate = (!icmp_ln887_1 & k_V == 69)> <Delay = 0.00>
+ST_3 : Operation 235 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_68_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 235 'write' <Predicate = (!icmp_ln887_1 & k_V == 68)> <Delay = 0.00>
+ST_3 : Operation 236 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 236 'br' <Predicate = (!icmp_ln887_1 & k_V == 68)> <Delay = 0.00>
+ST_3 : Operation 237 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_67_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 237 'write' <Predicate = (!icmp_ln887_1 & k_V == 67)> <Delay = 0.00>
+ST_3 : Operation 238 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 238 'br' <Predicate = (!icmp_ln887_1 & k_V == 67)> <Delay = 0.00>
+ST_3 : Operation 239 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_66_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 239 'write' <Predicate = (!icmp_ln887_1 & k_V == 66)> <Delay = 0.00>
+ST_3 : Operation 240 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 240 'br' <Predicate = (!icmp_ln887_1 & k_V == 66)> <Delay = 0.00>
+ST_3 : Operation 241 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_65_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 241 'write' <Predicate = (!icmp_ln887_1 & k_V == 65)> <Delay = 0.00>
+ST_3 : Operation 242 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 242 'br' <Predicate = (!icmp_ln887_1 & k_V == 65)> <Delay = 0.00>
+ST_3 : Operation 243 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_64_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 243 'write' <Predicate = (!icmp_ln887_1 & k_V == 64)> <Delay = 0.00>
+ST_3 : Operation 244 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 244 'br' <Predicate = (!icmp_ln887_1 & k_V == 64)> <Delay = 0.00>
+ST_3 : Operation 245 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_63_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 245 'write' <Predicate = (!icmp_ln887_1 & k_V == 63)> <Delay = 0.00>
+ST_3 : Operation 246 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 246 'br' <Predicate = (!icmp_ln887_1 & k_V == 63)> <Delay = 0.00>
+ST_3 : Operation 247 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_62_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 247 'write' <Predicate = (!icmp_ln887_1 & k_V == 62)> <Delay = 0.00>
+ST_3 : Operation 248 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 248 'br' <Predicate = (!icmp_ln887_1 & k_V == 62)> <Delay = 0.00>
+ST_3 : Operation 249 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_61_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 249 'write' <Predicate = (!icmp_ln887_1 & k_V == 61)> <Delay = 0.00>
+ST_3 : Operation 250 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 250 'br' <Predicate = (!icmp_ln887_1 & k_V == 61)> <Delay = 0.00>
+ST_3 : Operation 251 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_60_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 251 'write' <Predicate = (!icmp_ln887_1 & k_V == 60)> <Delay = 0.00>
+ST_3 : Operation 252 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 252 'br' <Predicate = (!icmp_ln887_1 & k_V == 60)> <Delay = 0.00>
+ST_3 : Operation 253 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_59_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 253 'write' <Predicate = (!icmp_ln887_1 & k_V == 59)> <Delay = 0.00>
+ST_3 : Operation 254 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 254 'br' <Predicate = (!icmp_ln887_1 & k_V == 59)> <Delay = 0.00>
+ST_3 : Operation 255 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_58_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 255 'write' <Predicate = (!icmp_ln887_1 & k_V == 58)> <Delay = 0.00>
+ST_3 : Operation 256 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 256 'br' <Predicate = (!icmp_ln887_1 & k_V == 58)> <Delay = 0.00>
+ST_3 : Operation 257 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_57_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 257 'write' <Predicate = (!icmp_ln887_1 & k_V == 57)> <Delay = 0.00>
+ST_3 : Operation 258 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 258 'br' <Predicate = (!icmp_ln887_1 & k_V == 57)> <Delay = 0.00>
+ST_3 : Operation 259 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_56_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 259 'write' <Predicate = (!icmp_ln887_1 & k_V == 56)> <Delay = 0.00>
+ST_3 : Operation 260 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 260 'br' <Predicate = (!icmp_ln887_1 & k_V == 56)> <Delay = 0.00>
+ST_3 : Operation 261 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_55_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 261 'write' <Predicate = (!icmp_ln887_1 & k_V == 55)> <Delay = 0.00>
+ST_3 : Operation 262 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 262 'br' <Predicate = (!icmp_ln887_1 & k_V == 55)> <Delay = 0.00>
+ST_3 : Operation 263 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_54_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 263 'write' <Predicate = (!icmp_ln887_1 & k_V == 54)> <Delay = 0.00>
+ST_3 : Operation 264 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 264 'br' <Predicate = (!icmp_ln887_1 & k_V == 54)> <Delay = 0.00>
+ST_3 : Operation 265 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_53_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 265 'write' <Predicate = (!icmp_ln887_1 & k_V == 53)> <Delay = 0.00>
+ST_3 : Operation 266 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 266 'br' <Predicate = (!icmp_ln887_1 & k_V == 53)> <Delay = 0.00>
+ST_3 : Operation 267 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_52_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 267 'write' <Predicate = (!icmp_ln887_1 & k_V == 52)> <Delay = 0.00>
+ST_3 : Operation 268 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 268 'br' <Predicate = (!icmp_ln887_1 & k_V == 52)> <Delay = 0.00>
+ST_3 : Operation 269 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_51_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 269 'write' <Predicate = (!icmp_ln887_1 & k_V == 51)> <Delay = 0.00>
+ST_3 : Operation 270 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 270 'br' <Predicate = (!icmp_ln887_1 & k_V == 51)> <Delay = 0.00>
+ST_3 : Operation 271 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_50_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 271 'write' <Predicate = (!icmp_ln887_1 & k_V == 50)> <Delay = 0.00>
+ST_3 : Operation 272 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 272 'br' <Predicate = (!icmp_ln887_1 & k_V == 50)> <Delay = 0.00>
+ST_3 : Operation 273 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_49_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 273 'write' <Predicate = (!icmp_ln887_1 & k_V == 49)> <Delay = 0.00>
+ST_3 : Operation 274 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 274 'br' <Predicate = (!icmp_ln887_1 & k_V == 49)> <Delay = 0.00>
+ST_3 : Operation 275 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_48_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 275 'write' <Predicate = (!icmp_ln887_1 & k_V == 48)> <Delay = 0.00>
+ST_3 : Operation 276 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 276 'br' <Predicate = (!icmp_ln887_1 & k_V == 48)> <Delay = 0.00>
+ST_3 : Operation 277 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_47_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 277 'write' <Predicate = (!icmp_ln887_1 & k_V == 47)> <Delay = 0.00>
+ST_3 : Operation 278 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 278 'br' <Predicate = (!icmp_ln887_1 & k_V == 47)> <Delay = 0.00>
+ST_3 : Operation 279 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_46_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 279 'write' <Predicate = (!icmp_ln887_1 & k_V == 46)> <Delay = 0.00>
+ST_3 : Operation 280 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 280 'br' <Predicate = (!icmp_ln887_1 & k_V == 46)> <Delay = 0.00>
+ST_3 : Operation 281 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_45_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 281 'write' <Predicate = (!icmp_ln887_1 & k_V == 45)> <Delay = 0.00>
+ST_3 : Operation 282 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 282 'br' <Predicate = (!icmp_ln887_1 & k_V == 45)> <Delay = 0.00>
+ST_3 : Operation 283 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_44_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 283 'write' <Predicate = (!icmp_ln887_1 & k_V == 44)> <Delay = 0.00>
+ST_3 : Operation 284 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 284 'br' <Predicate = (!icmp_ln887_1 & k_V == 44)> <Delay = 0.00>
+ST_3 : Operation 285 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_43_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 285 'write' <Predicate = (!icmp_ln887_1 & k_V == 43)> <Delay = 0.00>
+ST_3 : Operation 286 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 286 'br' <Predicate = (!icmp_ln887_1 & k_V == 43)> <Delay = 0.00>
+ST_3 : Operation 287 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_42_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 287 'write' <Predicate = (!icmp_ln887_1 & k_V == 42)> <Delay = 0.00>
+ST_3 : Operation 288 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 288 'br' <Predicate = (!icmp_ln887_1 & k_V == 42)> <Delay = 0.00>
+ST_3 : Operation 289 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_41_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 289 'write' <Predicate = (!icmp_ln887_1 & k_V == 41)> <Delay = 0.00>
+ST_3 : Operation 290 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 290 'br' <Predicate = (!icmp_ln887_1 & k_V == 41)> <Delay = 0.00>
+ST_3 : Operation 291 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_40_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 291 'write' <Predicate = (!icmp_ln887_1 & k_V == 40)> <Delay = 0.00>
+ST_3 : Operation 292 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 292 'br' <Predicate = (!icmp_ln887_1 & k_V == 40)> <Delay = 0.00>
+ST_3 : Operation 293 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_39_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 293 'write' <Predicate = (!icmp_ln887_1 & k_V == 39)> <Delay = 0.00>
+ST_3 : Operation 294 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 294 'br' <Predicate = (!icmp_ln887_1 & k_V == 39)> <Delay = 0.00>
+ST_3 : Operation 295 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_38_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 295 'write' <Predicate = (!icmp_ln887_1 & k_V == 38)> <Delay = 0.00>
+ST_3 : Operation 296 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 296 'br' <Predicate = (!icmp_ln887_1 & k_V == 38)> <Delay = 0.00>
+ST_3 : Operation 297 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_37_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 297 'write' <Predicate = (!icmp_ln887_1 & k_V == 37)> <Delay = 0.00>
+ST_3 : Operation 298 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 298 'br' <Predicate = (!icmp_ln887_1 & k_V == 37)> <Delay = 0.00>
+ST_3 : Operation 299 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_36_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 299 'write' <Predicate = (!icmp_ln887_1 & k_V == 36)> <Delay = 0.00>
+ST_3 : Operation 300 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 300 'br' <Predicate = (!icmp_ln887_1 & k_V == 36)> <Delay = 0.00>
+ST_3 : Operation 301 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_35_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 301 'write' <Predicate = (!icmp_ln887_1 & k_V == 35)> <Delay = 0.00>
+ST_3 : Operation 302 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 302 'br' <Predicate = (!icmp_ln887_1 & k_V == 35)> <Delay = 0.00>
+ST_3 : Operation 303 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_34_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 303 'write' <Predicate = (!icmp_ln887_1 & k_V == 34)> <Delay = 0.00>
+ST_3 : Operation 304 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 304 'br' <Predicate = (!icmp_ln887_1 & k_V == 34)> <Delay = 0.00>
+ST_3 : Operation 305 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_33_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 305 'write' <Predicate = (!icmp_ln887_1 & k_V == 33)> <Delay = 0.00>
+ST_3 : Operation 306 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 306 'br' <Predicate = (!icmp_ln887_1 & k_V == 33)> <Delay = 0.00>
+ST_3 : Operation 307 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_32_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 307 'write' <Predicate = (!icmp_ln887_1 & k_V == 32)> <Delay = 0.00>
+ST_3 : Operation 308 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 308 'br' <Predicate = (!icmp_ln887_1 & k_V == 32)> <Delay = 0.00>
+ST_3 : Operation 309 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_31_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 309 'write' <Predicate = (!icmp_ln887_1 & k_V == 31)> <Delay = 0.00>
+ST_3 : Operation 310 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 310 'br' <Predicate = (!icmp_ln887_1 & k_V == 31)> <Delay = 0.00>
+ST_3 : Operation 311 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_30_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 311 'write' <Predicate = (!icmp_ln887_1 & k_V == 30)> <Delay = 0.00>
+ST_3 : Operation 312 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 312 'br' <Predicate = (!icmp_ln887_1 & k_V == 30)> <Delay = 0.00>
+ST_3 : Operation 313 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_29_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 313 'write' <Predicate = (!icmp_ln887_1 & k_V == 29)> <Delay = 0.00>
+ST_3 : Operation 314 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 314 'br' <Predicate = (!icmp_ln887_1 & k_V == 29)> <Delay = 0.00>
+ST_3 : Operation 315 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_28_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 315 'write' <Predicate = (!icmp_ln887_1 & k_V == 28)> <Delay = 0.00>
+ST_3 : Operation 316 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 316 'br' <Predicate = (!icmp_ln887_1 & k_V == 28)> <Delay = 0.00>
+ST_3 : Operation 317 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_27_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 317 'write' <Predicate = (!icmp_ln887_1 & k_V == 27)> <Delay = 0.00>
+ST_3 : Operation 318 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 318 'br' <Predicate = (!icmp_ln887_1 & k_V == 27)> <Delay = 0.00>
+ST_3 : Operation 319 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_26_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 319 'write' <Predicate = (!icmp_ln887_1 & k_V == 26)> <Delay = 0.00>
+ST_3 : Operation 320 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 320 'br' <Predicate = (!icmp_ln887_1 & k_V == 26)> <Delay = 0.00>
+ST_3 : Operation 321 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_25_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 321 'write' <Predicate = (!icmp_ln887_1 & k_V == 25)> <Delay = 0.00>
+ST_3 : Operation 322 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 322 'br' <Predicate = (!icmp_ln887_1 & k_V == 25)> <Delay = 0.00>
+ST_3 : Operation 323 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_24_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 323 'write' <Predicate = (!icmp_ln887_1 & k_V == 24)> <Delay = 0.00>
+ST_3 : Operation 324 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 324 'br' <Predicate = (!icmp_ln887_1 & k_V == 24)> <Delay = 0.00>
+ST_3 : Operation 325 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_23_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 325 'write' <Predicate = (!icmp_ln887_1 & k_V == 23)> <Delay = 0.00>
+ST_3 : Operation 326 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 326 'br' <Predicate = (!icmp_ln887_1 & k_V == 23)> <Delay = 0.00>
+ST_3 : Operation 327 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_22_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 327 'write' <Predicate = (!icmp_ln887_1 & k_V == 22)> <Delay = 0.00>
+ST_3 : Operation 328 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 328 'br' <Predicate = (!icmp_ln887_1 & k_V == 22)> <Delay = 0.00>
+ST_3 : Operation 329 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_21_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 329 'write' <Predicate = (!icmp_ln887_1 & k_V == 21)> <Delay = 0.00>
+ST_3 : Operation 330 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 330 'br' <Predicate = (!icmp_ln887_1 & k_V == 21)> <Delay = 0.00>
+ST_3 : Operation 331 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_20_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 331 'write' <Predicate = (!icmp_ln887_1 & k_V == 20)> <Delay = 0.00>
+ST_3 : Operation 332 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 332 'br' <Predicate = (!icmp_ln887_1 & k_V == 20)> <Delay = 0.00>
+ST_3 : Operation 333 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_19_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 333 'write' <Predicate = (!icmp_ln887_1 & k_V == 19)> <Delay = 0.00>
+ST_3 : Operation 334 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 334 'br' <Predicate = (!icmp_ln887_1 & k_V == 19)> <Delay = 0.00>
+ST_3 : Operation 335 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_18_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 335 'write' <Predicate = (!icmp_ln887_1 & k_V == 18)> <Delay = 0.00>
+ST_3 : Operation 336 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 336 'br' <Predicate = (!icmp_ln887_1 & k_V == 18)> <Delay = 0.00>
+ST_3 : Operation 337 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_17_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 337 'write' <Predicate = (!icmp_ln887_1 & k_V == 17)> <Delay = 0.00>
+ST_3 : Operation 338 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 338 'br' <Predicate = (!icmp_ln887_1 & k_V == 17)> <Delay = 0.00>
+ST_3 : Operation 339 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_16_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 339 'write' <Predicate = (!icmp_ln887_1 & k_V == 16)> <Delay = 0.00>
+ST_3 : Operation 340 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 340 'br' <Predicate = (!icmp_ln887_1 & k_V == 16)> <Delay = 0.00>
+ST_3 : Operation 341 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_15_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 341 'write' <Predicate = (!icmp_ln887_1 & k_V == 15)> <Delay = 0.00>
+ST_3 : Operation 342 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 342 'br' <Predicate = (!icmp_ln887_1 & k_V == 15)> <Delay = 0.00>
+ST_3 : Operation 343 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_14_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 343 'write' <Predicate = (!icmp_ln887_1 & k_V == 14)> <Delay = 0.00>
+ST_3 : Operation 344 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 344 'br' <Predicate = (!icmp_ln887_1 & k_V == 14)> <Delay = 0.00>
+ST_3 : Operation 345 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_13_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 345 'write' <Predicate = (!icmp_ln887_1 & k_V == 13)> <Delay = 0.00>
+ST_3 : Operation 346 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 346 'br' <Predicate = (!icmp_ln887_1 & k_V == 13)> <Delay = 0.00>
+ST_3 : Operation 347 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_12_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 347 'write' <Predicate = (!icmp_ln887_1 & k_V == 12)> <Delay = 0.00>
+ST_3 : Operation 348 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 348 'br' <Predicate = (!icmp_ln887_1 & k_V == 12)> <Delay = 0.00>
+ST_3 : Operation 349 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_11_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 349 'write' <Predicate = (!icmp_ln887_1 & k_V == 11)> <Delay = 0.00>
+ST_3 : Operation 350 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 350 'br' <Predicate = (!icmp_ln887_1 & k_V == 11)> <Delay = 0.00>
+ST_3 : Operation 351 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_10_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 351 'write' <Predicate = (!icmp_ln887_1 & k_V == 10)> <Delay = 0.00>
+ST_3 : Operation 352 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 352 'br' <Predicate = (!icmp_ln887_1 & k_V == 10)> <Delay = 0.00>
+ST_3 : Operation 353 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_9_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 353 'write' <Predicate = (!icmp_ln887_1 & k_V == 9)> <Delay = 0.00>
+ST_3 : Operation 354 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 354 'br' <Predicate = (!icmp_ln887_1 & k_V == 9)> <Delay = 0.00>
+ST_3 : Operation 355 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_8_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 355 'write' <Predicate = (!icmp_ln887_1 & k_V == 8)> <Delay = 0.00>
+ST_3 : Operation 356 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 356 'br' <Predicate = (!icmp_ln887_1 & k_V == 8)> <Delay = 0.00>
+ST_3 : Operation 357 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_7_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 357 'write' <Predicate = (!icmp_ln887_1 & k_V == 7)> <Delay = 0.00>
+ST_3 : Operation 358 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 358 'br' <Predicate = (!icmp_ln887_1 & k_V == 7)> <Delay = 0.00>
+ST_3 : Operation 359 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_6_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 359 'write' <Predicate = (!icmp_ln887_1 & k_V == 6)> <Delay = 0.00>
+ST_3 : Operation 360 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 360 'br' <Predicate = (!icmp_ln887_1 & k_V == 6)> <Delay = 0.00>
+ST_3 : Operation 361 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_5_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 361 'write' <Predicate = (!icmp_ln887_1 & k_V == 5)> <Delay = 0.00>
+ST_3 : Operation 362 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 362 'br' <Predicate = (!icmp_ln887_1 & k_V == 5)> <Delay = 0.00>
+ST_3 : Operation 363 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_4_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 363 'write' <Predicate = (!icmp_ln887_1 & k_V == 4)> <Delay = 0.00>
+ST_3 : Operation 364 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 364 'br' <Predicate = (!icmp_ln887_1 & k_V == 4)> <Delay = 0.00>
+ST_3 : Operation 365 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_3_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 365 'write' <Predicate = (!icmp_ln887_1 & k_V == 3)> <Delay = 0.00>
+ST_3 : Operation 366 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 366 'br' <Predicate = (!icmp_ln887_1 & k_V == 3)> <Delay = 0.00>
+ST_3 : Operation 367 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_2_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 367 'write' <Predicate = (!icmp_ln887_1 & k_V == 2)> <Delay = 0.00>
+ST_3 : Operation 368 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 368 'br' <Predicate = (!icmp_ln887_1 & k_V == 2)> <Delay = 0.00>
+ST_3 : Operation 369 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_1_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 369 'write' <Predicate = (!icmp_ln887_1 & k_V == 1)> <Delay = 0.00>
+ST_3 : Operation 370 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 370 'br' <Predicate = (!icmp_ln887_1 & k_V == 1)> <Delay = 0.00>
+ST_3 : Operation 371 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_0_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 371 'write' <Predicate = (!icmp_ln887_1 & k_V == 0)> <Delay = 0.00>
+ST_3 : Operation 372 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 372 'br' <Predicate = (!icmp_ln887_1 & k_V == 0)> <Delay = 0.00>
+ST_3 : Operation 373 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %out_89_V, i8 %y_V)" [lec6Ex2a.cpp:26]   --->   Operation 373 'write' <Predicate = (!icmp_ln887_1 & k_V == 127) | (!icmp_ln887_1 & k_V == 126) | (!icmp_ln887_1 & k_V == 125) | (!icmp_ln887_1 & k_V == 124) | (!icmp_ln887_1 & k_V == 123) | (!icmp_ln887_1 & k_V == 122) | (!icmp_ln887_1 & k_V == 121) | (!icmp_ln887_1 & k_V == 120) | (!icmp_ln887_1 & k_V == 119) | (!icmp_ln887_1 & k_V == 118) | (!icmp_ln887_1 & k_V == 117) | (!icmp_ln887_1 & k_V == 116) | (!icmp_ln887_1 & k_V == 115) | (!icmp_ln887_1 & k_V == 114) | (!icmp_ln887_1 & k_V == 113) | (!icmp_ln887_1 & k_V == 112) | (!icmp_ln887_1 & k_V == 111) | (!icmp_ln887_1 & k_V == 110) | (!icmp_ln887_1 & k_V == 109) | (!icmp_ln887_1 & k_V == 108) | (!icmp_ln887_1 & k_V == 107) | (!icmp_ln887_1 & k_V == 106) | (!icmp_ln887_1 & k_V == 105) | (!icmp_ln887_1 & k_V == 104) | (!icmp_ln887_1 & k_V == 103) | (!icmp_ln887_1 & k_V == 102) | (!icmp_ln887_1 & k_V == 101) | (!icmp_ln887_1 & k_V == 100) | (!icmp_ln887_1 & k_V == 99) | (!icmp_ln887_1 & k_V == 98) | (!icmp_ln887_1 & k_V == 97) | (!icmp_ln887_1 & k_V == 96) | (!icmp_ln887_1 & k_V == 95) | (!icmp_ln887_1 & k_V == 94) | (!icmp_ln887_1 & k_V == 93) | (!icmp_ln887_1 & k_V == 92) | (!icmp_ln887_1 & k_V == 91) | (!icmp_ln887_1 & k_V == 90) | (!icmp_ln887_1 & k_V == 89)> <Delay = 0.00>
+ST_3 : Operation 374 [1/1] (0.00ns)   --->   "br label %4" [lec6Ex2a.cpp:26]   --->   Operation 374 'br' <Predicate = (!icmp_ln887_1 & k_V == 127) | (!icmp_ln887_1 & k_V == 126) | (!icmp_ln887_1 & k_V == 125) | (!icmp_ln887_1 & k_V == 124) | (!icmp_ln887_1 & k_V == 123) | (!icmp_ln887_1 & k_V == 122) | (!icmp_ln887_1 & k_V == 121) | (!icmp_ln887_1 & k_V == 120) | (!icmp_ln887_1 & k_V == 119) | (!icmp_ln887_1 & k_V == 118) | (!icmp_ln887_1 & k_V == 117) | (!icmp_ln887_1 & k_V == 116) | (!icmp_ln887_1 & k_V == 115) | (!icmp_ln887_1 & k_V == 114) | (!icmp_ln887_1 & k_V == 113) | (!icmp_ln887_1 & k_V == 112) | (!icmp_ln887_1 & k_V == 111) | (!icmp_ln887_1 & k_V == 110) | (!icmp_ln887_1 & k_V == 109) | (!icmp_ln887_1 & k_V == 108) | (!icmp_ln887_1 & k_V == 107) | (!icmp_ln887_1 & k_V == 106) | (!icmp_ln887_1 & k_V == 105) | (!icmp_ln887_1 & k_V == 104) | (!icmp_ln887_1 & k_V == 103) | (!icmp_ln887_1 & k_V == 102) | (!icmp_ln887_1 & k_V == 101) | (!icmp_ln887_1 & k_V == 100) | (!icmp_ln887_1 & k_V == 99) | (!icmp_ln887_1 & k_V == 98) | (!icmp_ln887_1 & k_V == 97) | (!icmp_ln887_1 & k_V == 96) | (!icmp_ln887_1 & k_V == 95) | (!icmp_ln887_1 & k_V == 94) | (!icmp_ln887_1 & k_V == 93) | (!icmp_ln887_1 & k_V == 92) | (!icmp_ln887_1 & k_V == 91) | (!icmp_ln887_1 & k_V == 90) | (!icmp_ln887_1 & k_V == 89)> <Delay = 0.00>
+ST_3 : Operation 375 [1/1] (0.00ns)   --->   "br label %2" [lec6Ex2a.cpp:21]   --->   Operation 375 'br' <Predicate = (!icmp_ln887_1)> <Delay = 0.00>
+ST_3 : Operation 376 [1/1] (0.00ns)   --->   "%empty_3 = call i32 (...)* @_ssdm_op_SpecRegionEnd([7 x i8]* @p_str2, i32 %tmp)" [lec6Ex2a.cpp:28]   --->   Operation 376 'specregionend' 'empty_3' <Predicate = (icmp_ln887_1)> <Delay = 0.00>
+ST_3 : Operation 377 [1/1] (0.00ns)   --->   "br label %1" [lec6Ex2a.cpp:17]   --->   Operation 377 'br' <Predicate = (icmp_ln887_1)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 0.872ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('j.V') with incoming values : ('j.V', lec6Ex2a.cpp:17) [258]  (0.872 ns)
+
+ <State 2>: 3.59ns
+The critical path consists of the following:
+	'phi' operation ('j.V') with incoming values : ('j.V', lec6Ex2a.cpp:17) [258]  (0 ns)
+	'mux' operation ('phi_ln', lec6Ex2a.cpp:19) [270]  (0.887 ns)
+	'mul' operation ('tmp.V', lec6Ex2a.cpp:19) [271]  (2.7 ns)
+
+ <State 3>: 8.21ns
+The critical path consists of the following:
+	'phi' operation ('i.V') with incoming values : ('i.V', lec6Ex2a.cpp:21) [278]  (0 ns)
+	'mux' operation ('x.V', lec6Ex2a.cpp:24) [313]  (1.76 ns)
+	'mul' operation of DSP[315] ('mul_ln209', lec6Ex2a.cpp:25) [314]  (2.39 ns)
+	'add' operation of DSP[315] ('add_ln209', lec6Ex2a.cpp:25) [315]  (2.7 ns)
+	'add' operation ('y.V', lec6Ex2a.cpp:25) [316]  (1.36 ns)
+	wire write on port 'out_88_V' (lec6Ex2a.cpp:26) [319]  (0 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

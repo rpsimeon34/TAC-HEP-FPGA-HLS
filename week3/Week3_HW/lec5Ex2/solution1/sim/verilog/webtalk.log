@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Apr 11 12:58:50 2023
+# Process ID: 20715
+# Current directory: /afs/hep.wisc.edu/user/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week3/lec5Ex2/solution1/sim/verilog
+# Command line: wbtcv -mode batch -source /afs/hep.wisc.edu/user/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week3/lec5Ex2/solution1/sim/verilog/xsim.dir/lec5Ex1/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /afs/hep.wisc.edu/user/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week3/lec5Ex2/solution1/sim/verilog/webtalk.log
+# Journal file: /afs/hep.wisc.edu/user/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week3/lec5Ex2/solution1/sim/verilog/webtalk.jou
+#-----------------------------------------------------------
+source /afs/hep.wisc.edu/user/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week3/lec5Ex2/solution1/sim/verilog/xsim.dir/lec5Ex1/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Apr 11 12:58:50 2023...
