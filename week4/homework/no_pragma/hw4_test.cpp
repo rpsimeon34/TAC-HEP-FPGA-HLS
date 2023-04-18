@@ -2,35 +2,29 @@
 #include <stdlib.h>
 
 int main () {
-  FILE         *oFile;
-
-  int in_A[DSIZE] = {5,7,22,19,7,4};
-  int in_B[DSIZE] = {2,14,4,6,11,3};
+  int input1[DSIZE] = {3,6,9,12,4,7};
+  int input2[DSIZE] = {8,12,15,1,2,9};
   int output;
 
+
   printf("--------------\n");
-  for(int irnd=0; irnd<DSIZE; irnd++){
-    printf("%i, input: %i\n", irnd, input[irnd]);
+  printf("Input 1: [");
+  for(int i=0; i<DSIZE; i++){
+    printf("%i, ",input1[i]);
   }
-  for(int p=0; p<KK; p++){
-    output[p] = 0;
+  printf("]\n");
+  printf("Input 2: [");
+  for(int j=0; j<DSIZE; j++){
+    printf("%i, ",input2[j]);
   }
+  printf("]\n");
   printf("--------------\n");
 
-  oFile=fopen("lec6Ex2_out.dat","w");
-
-  lec6Ex2(input, a, b, c, output);
-
-  for(int i=0; i<MM; i++){
-    for(int j=0; j<NN; j++){
-      int k = j+i*NN;
-      fprintf(oFile,"%i %u %u\n",k,input[j],output[k]);
-    }  
-  }
-  fclose(oFile);
+  // Execute the function with latest input
+  hw4(input1,input2,&output);
 
 printf ("Comparing against output data \n");
-if (system("diff -w lec6Ex2_out.dat lec6Ex2_out_ref.dat")) {
+if (output != 314) {
 
   fprintf(stdout, "*******************************************\n");
   fprintf(stdout, "FAIL: Output DOES NOT match the reference output\n");

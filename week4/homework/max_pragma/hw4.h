@@ -6,10 +6,10 @@
 
 #define DSIZE 6
 
-void homework4(
+void hw4(
   int in_A[DSIZE],
   int in_B[DSIZE],
-  int out
+  int *out
   );
 
 #endif

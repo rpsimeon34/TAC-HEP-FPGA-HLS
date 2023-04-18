@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="hw4.cpp" path="/afs/hep.wisc.edu/user/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week4/homework/no_pragma/hw4.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="hw4_test.cpp" path="/afs/hep.wisc.edu/user/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week4/homework/no_pragma/hw4_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
