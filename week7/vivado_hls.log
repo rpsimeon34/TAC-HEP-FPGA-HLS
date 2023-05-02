@@ -1,0 +1,220 @@
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'varuns' on host 'cmstrigger02.hep.wisc.edu' (Linux_x86_64 version 5.4.240-1.el7.elrepo.x86_64) on Tue May 02 06:39:02 CDT 2023
+INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core)"
+INFO: [HLS 200-10] In directory '/nfs_scratch/varuns/tac-hep-fpga/TAC-HEP-FPGA-HLS/week7'
+Sourcing Tcl script '/nfs_scratch/varuns/tac-hep-fpga/TAC-HEP-FPGA-HLS/week7/lec13Ex2/solution1/cosim.tcl'
+INFO: [HLS 200-10] Opening project '/nfs_scratch/varuns/tac-hep-fpga/TAC-HEP-FPGA-HLS/week7/lec13Ex2'.
+INFO: [HLS 200-10] Opening solution '/nfs_scratch/varuns/tac-hep-fpga/TAC-HEP-FPGA-HLS/week7/lec13Ex2/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7k160t-fbg484-2L'
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "/opt/Xilinx/Vivado/2020.1/tps/lnx64/gcc-6.2.0/bin/g++"
+   Compiling apatb_lec13Ex2.cpp
+   Compiling (apcc) lec13Ex2.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'varuns' on host 'cmstrigger02.hep.wisc.edu' (Linux_x86_64 version 5.4.240-1.el7.elrepo.x86_64) on Tue May 02 06:39:19 CDT 2023
+INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core)"
+INFO: [HLS 200-10] In directory '/nfs_scratch/varuns/tac-hep-fpga/TAC-HEP-FPGA-HLS/week7/lec13Ex2/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_varuns/345951683027559867786
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) lec13Ex2_tb.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'varuns' on host 'cmstrigger02.hep.wisc.edu' (Linux_x86_64 version 5.4.240-1.el7.elrepo.x86_64) on Tue May 02 06:39:29 CDT 2023
+INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core)"
+INFO: [HLS 200-10] In directory '/nfs_scratch/varuns/tac-hep-fpga/TAC-HEP-FPGA-HLS/week7/lec13Ex2/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_varuns/347371683027569510982
+INFO: [APCC 202-1] APCC is done.
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+0, input: 31, input: 62, input: 173, input: 154, input: 135, input: 156, input: 67, input: 128, input: 99, input: 110, input: 211, input: 712, input: 1013, input: 1914, input: 315, input: 616, input: 017, input: 618, input: 1219, input: 1620, input: 1121, input: 822, input: 723, input: 924, input: 225, input: 1026, input: 227, input: 328, input: 729, input: 1530, input: 931, input: 232, input: 233, input: 1834, input: 935, input: 736, input: 1337, input: 1638, input: 1139, input: 240, input: 941, input: 1342, input: 143, input: 1944, input: 445, input: 1746, input: 1847, input: 448, input: 1549, input: 1050, input: 1351, input: 652, input: 1153, input: 054, input: 1655, input: 1356, input: 257, input: 1058, input: 1659, input: 10 3 73
+1 6 79
+2 17 101
+3 15 97
+4 13 93
+5 15 97
+6 6 79
+7 12 91
+8 9 85
+9 1 69
+10 2 71
+11 7 81
+12 10 87
+13 19 105
+14 3 73
+15 6 79
+16 0 67
+17 6 79
+18 12 91
+19 16 99
+20 11 89
+21 8 83
+22 7 81
+23 9 85
+24 2 71
+25 10 87
+26 2 71
+27 3 73
+28 7 81
+29 15 97
+30 9 85
+31 2 71
+32 2 71
+33 18 103
+34 9 85
+35 7 81
+36 13 93
+37 16 99
+38 11 89
+39 2 71
+40 9 85
+41 13 93
+42 1 69
+43 19 105
+44 4 75
+45 17 101
+46 18 103
+47 4 75
+48 15 97
+49 10 87
+50 13 93
+51 6 79
+52 11 89
+53 0 67
+54 16 99
+55 13 93
+56 2 71
+57 10 87
+58 16 99
+59 1 69
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "/opt/Xilinx/Vivado/2020.1/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_lec13Ex2_top glbl -prj lec13Ex2.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile /opt/Xilinx/Vivado/2020.1/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s lec13Ex2 
+Multi-threading is on. Using 38 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/nfs_scratch/varuns/tac-hep-fpga/TAC-HEP-FPGA-HLS/week7/lec13Ex2/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/nfs_scratch/varuns/tac-hep-fpga/TAC-HEP-FPGA-HLS/week7/lec13Ex2/solution1/sim/verilog/lec13Ex2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lec13Ex2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/nfs_scratch/varuns/tac-hep-fpga/TAC-HEP-FPGA-HLS/week7/lec13Ex2/solution1/sim/verilog/AESL_automem_in_arr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_in_arr
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/nfs_scratch/varuns/tac-hep-fpga/TAC-HEP-FPGA-HLS/week7/lec13Ex2/solution1/sim/verilog/AESL_automem_out_arr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_out_arr
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/nfs_scratch/varuns/tac-hep-fpga/TAC-HEP-FPGA-HLS/week7/lec13Ex2/solution1/sim/verilog/lec13Ex2.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_lec13Ex2_top
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.lec13Ex2
+Compiling module xil_defaultlib.AESL_automem_in_arr
+Compiling module xil_defaultlib.AESL_automem_out_arr
+Compiling module xil_defaultlib.apatb_lec13Ex2_top
+Compiling module work.glbl
+Built simulation snapshot lec13Ex2
+
+****** Webtalk v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source /nfs_scratch/varuns/tac-hep-fpga/TAC-HEP-FPGA-HLS/week7/lec13Ex2/solution1/sim/verilog/xsim.dir/lec13Ex2/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue May  2 06:39:45 2023...
+
+****** xsim v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/lec13Ex2/xsim_script.tcl
+# xsim {lec13Ex2} -autoloadwcfg -tclbatch {lec13Ex2.tcl}
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source lec13Ex2.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [100.00%] @ "1955000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 1995 ns : File "/nfs_scratch/varuns/tac-hep-fpga/TAC-HEP-FPGA-HLS/week7/lec13Ex2/solution1/sim/verilog/lec13Ex2.autotb.v" Line 445
+## quit
+INFO: [Common 17-206] Exiting xsim at Tue May  2 06:39:58 2023...
+INFO: [COSIM 212-316] Starting C post checking ...
+0, input: 31, input: 62, input: 173, input: 154, input: 135, input: 156, input: 67, input: 128, input: 99, input: 110, input: 211, input: 712, input: 1013, input: 1914, input: 315, input: 616, input: 017, input: 618, input: 1219, input: 1620, input: 1121, input: 822, input: 723, input: 924, input: 225, input: 1026, input: 227, input: 328, input: 729, input: 1530, input: 931, input: 232, input: 233, input: 1834, input: 935, input: 736, input: 1337, input: 1638, input: 1139, input: 240, input: 941, input: 1342, input: 143, input: 1944, input: 445, input: 1746, input: 1847, input: 448, input: 1549, input: 1050, input: 1351, input: 652, input: 1153, input: 054, input: 1655, input: 1356, input: 257, input: 1058, input: 1659, input: 10 3 73
+1 6 79
+2 17 101
+3 15 97
+4 13 93
+5 15 97
+6 6 79
+7 12 91
+8 9 85
+9 1 69
+10 2 71
+11 7 81
+12 10 87
+13 19 105
+14 3 73
+15 6 79
+16 0 67
+17 6 79
+18 12 91
+19 16 99
+20 11 89
+21 8 83
+22 7 81
+23 9 85
+24 2 71
+25 10 87
+26 2 71
+27 3 73
+28 7 81
+29 15 97
+30 9 85
+31 2 71
+32 2 71
+33 18 103
+34 9 85
+35 7 81
+36 13 93
+37 16 99
+38 11 89
+39 2 71
+40 9 85
+41 13 93
+42 1 69
+43 19 105
+44 4 75
+45 17 101
+46 18 103
+47 4 75
+48 15 97
+49 10 87
+50 13 93
+51 6 79
+52 11 89
+53 0 67
+54 16 99
+55 13 93
+56 2 71
+57 10 87
+58 16 99
+59 1 69
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
