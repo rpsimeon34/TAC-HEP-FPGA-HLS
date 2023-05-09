@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [XFORM 203-104] Completely partitioning array 'out' (arrpart_lec8Ex1.c:8) accessed through non-constant indices on dimension 1 (arrpart_lec8Ex1.c:26:2), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead." projectName="hw4_arrpart" solutionName="solution1" date="2023-05-09T14:28:35.104-0500" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-104] Completely partitioning array 'in' (arrpart_lec8Ex1.c:4) accessed through non-constant indices on dimension 1 (arrpart_lec8Ex1.c:19:2), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead." projectName="hw4_arrpart" solutionName="solution1" date="2023-05-09T14:28:35.096-0500" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

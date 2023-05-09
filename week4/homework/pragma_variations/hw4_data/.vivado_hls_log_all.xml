@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'lec8Ex1/out' to 'lec8Ex1/out_r' to avoid the conflict with HDL keywords or other object names." projectName="hw4_data" solutionName="solution1" date="2023-05-09T14:00:30.638-0500" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'lec8Ex1/in' to 'lec8Ex1/in_r' to avoid the conflict with HDL keywords or other object names." projectName="hw4_data" solutionName="solution1" date="2023-05-09T14:00:30.632-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file data_lec8Ex1.c" projectName="hw4_data" solutionName="solution1" date="2023-05-09T14:00:28.843-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: data_lec8Ex1.c:15:1" projectName="hw4_data" solutionName="solution1" date="2023-05-09T14:00:23.814-0500" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

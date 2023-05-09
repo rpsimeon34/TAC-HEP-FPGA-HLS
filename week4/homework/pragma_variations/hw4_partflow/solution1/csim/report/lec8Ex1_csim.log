@@ -1,0 +1,79 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../../lec8Ex1_tb.c in debug mode
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'rsimeon' on host 'cmstrigger02.hep.wisc.edu' (Linux_x86_64 version 5.4.240-1.el7.elrepo.x86_64) on Tue May 09 14:36:14 CDT 2023
+INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core)"
+INFO: [HLS 200-10] In directory '/afs/hep.wisc.edu/user/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week4/homework/pragma_variations/hw4_partflow/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_rsimeon/89261683660974826371
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../../partflow_lec8Ex1.c in debug mode
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'rsimeon' on host 'cmstrigger02.hep.wisc.edu' (Linux_x86_64 version 5.4.240-1.el7.elrepo.x86_64) on Tue May 09 14:36:27 CDT 2023
+INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core)"
+INFO: [HLS 200-10] In directory '/afs/hep.wisc.edu/user/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week4/homework/pragma_variations/hw4_partflow/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_rsimeon/91191683660987791146
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+0, input: 31, input: 62, input: 173, input: 154, input: 135, input: 156, input: 67, input: 128, input: 99, input: 110, input: 211, input: 712, input: 1013, input: 1914, input: 315, input: 616, input: 017, input: 618, input: 1219, input: 1620, input: 1121, input: 822, input: 723, input: 924, input: 225, input: 1026, input: 227, input: 328, input: 729, input: 1530, input: 931, input: 232, input: 233, input: 1834, input: 935, input: 736, input: 1337, input: 1638, input: 1139, input: 240, input: 941, input: 1342, input: 143, input: 1944, input: 445, input: 1746, input: 1847, input: 448, input: 1549, input: 1050, input: 1351, input: 652, input: 1153, input: 054, input: 1655, input: 1356, input: 257, input: 1058, input: 1659, input: 10 3 73
+1 6 79
+2 17 101
+3 15 97
+4 13 93
+5 15 97
+6 6 79
+7 12 91
+8 9 85
+9 1 69
+10 2 71
+11 7 81
+12 10 87
+13 19 105
+14 3 73
+15 6 79
+16 0 67
+17 6 79
+18 12 91
+19 16 99
+20 11 89
+21 8 83
+22 7 81
+23 9 85
+24 2 71
+25 10 87
+26 2 71
+27 3 73
+28 7 81
+29 15 97
+30 9 85
+31 2 71
+32 2 71
+33 18 103
+34 9 85
+35 7 81
+36 13 93
+37 16 99
+38 11 89
+39 2 71
+40 9 85
+41 13 93
+42 1 69
+43 19 105
+44 4 75
+45 17 101
+46 18 103
+47 4 75
+48 15 97
+49 10 87
+50 13 93
+51 6 79
+52 11 89
+53 0 67
+54 16 99
+55 13 93
+56 2 71
+57 10 87
+58 16 99
+59 1 69
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

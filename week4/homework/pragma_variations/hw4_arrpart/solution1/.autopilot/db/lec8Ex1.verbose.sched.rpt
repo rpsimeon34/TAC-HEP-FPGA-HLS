@@ -1,0 +1,516 @@
+
+
+================================================================
+== Vivado HLS Report for 'lec8Ex1'
+================================================================
+* Date:           Tue May  9 14:28:36 2023
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        hw4_arrpart
+* Solution:       solution1
+* Product family: kintex7
+* Target device:  xc7k160t-fbg484-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 7.050 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      121|      121| 1.210 us | 1.210 us |  121|  121|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------+---------+---------+----------+-----------+-----------+------+----------+
+        |            |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- for_Loop  |      120|      120|         2|          -|          -|    60|    no    |
+        +------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 5.49>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_59), !map !19"   --->   Operation 4 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_58), !map !25"   --->   Operation 5 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_57), !map !31"   --->   Operation 6 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_56), !map !37"   --->   Operation 7 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_55), !map !43"   --->   Operation 8 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_54), !map !49"   --->   Operation 9 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_53), !map !55"   --->   Operation 10 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_52), !map !61"   --->   Operation 11 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_51), !map !67"   --->   Operation 12 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_50), !map !73"   --->   Operation 13 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_49), !map !79"   --->   Operation 14 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_48), !map !85"   --->   Operation 15 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_47), !map !91"   --->   Operation 16 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_46), !map !97"   --->   Operation 17 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_45), !map !103"   --->   Operation 18 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_44), !map !109"   --->   Operation 19 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_43), !map !115"   --->   Operation 20 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_42), !map !121"   --->   Operation 21 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_41), !map !127"   --->   Operation 22 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_40), !map !133"   --->   Operation 23 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_39), !map !139"   --->   Operation 24 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_38), !map !145"   --->   Operation 25 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_37), !map !151"   --->   Operation 26 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_36), !map !157"   --->   Operation 27 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_35), !map !163"   --->   Operation 28 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_34), !map !169"   --->   Operation 29 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_33), !map !175"   --->   Operation 30 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_32), !map !181"   --->   Operation 31 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_31), !map !187"   --->   Operation 32 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_30), !map !193"   --->   Operation 33 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_29), !map !199"   --->   Operation 34 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_28), !map !205"   --->   Operation 35 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_27), !map !211"   --->   Operation 36 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_26), !map !217"   --->   Operation 37 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_25), !map !223"   --->   Operation 38 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_24), !map !229"   --->   Operation 39 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_23), !map !235"   --->   Operation 40 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_22), !map !241"   --->   Operation 41 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_21), !map !247"   --->   Operation 42 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_20), !map !253"   --->   Operation 43 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_19), !map !259"   --->   Operation 44 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_18), !map !265"   --->   Operation 45 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_17), !map !271"   --->   Operation 46 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_16), !map !277"   --->   Operation 47 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_15), !map !283"   --->   Operation 48 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_14), !map !289"   --->   Operation 49 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_13), !map !295"   --->   Operation 50 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_12), !map !301"   --->   Operation 51 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_11), !map !307"   --->   Operation 52 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_10), !map !313"   --->   Operation 53 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_9), !map !319"   --->   Operation 54 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_8), !map !325"   --->   Operation 55 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_7), !map !331"   --->   Operation 56 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_6), !map !337"   --->   Operation 57 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_5), !map !343"   --->   Operation 58 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_4), !map !349"   --->   Operation 59 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_3), !map !355"   --->   Operation 60 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_2), !map !361"   --->   Operation 61 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_1), !map !367"   --->   Operation 62 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_0), !map !373"   --->   Operation 63 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_59), !map !379"   --->   Operation 64 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_58), !map !383"   --->   Operation 65 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_57), !map !387"   --->   Operation 66 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_56), !map !391"   --->   Operation 67 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_55), !map !395"   --->   Operation 68 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_54), !map !399"   --->   Operation 69 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_53), !map !403"   --->   Operation 70 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_52), !map !407"   --->   Operation 71 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_51), !map !411"   --->   Operation 72 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_50), !map !415"   --->   Operation 73 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_49), !map !419"   --->   Operation 74 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_48), !map !423"   --->   Operation 75 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_47), !map !427"   --->   Operation 76 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_46), !map !431"   --->   Operation 77 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_45), !map !435"   --->   Operation 78 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_44), !map !439"   --->   Operation 79 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_43), !map !443"   --->   Operation 80 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_42), !map !447"   --->   Operation 81 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_41), !map !451"   --->   Operation 82 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_40), !map !455"   --->   Operation 83 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_39), !map !459"   --->   Operation 84 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_38), !map !463"   --->   Operation 85 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_37), !map !467"   --->   Operation 86 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_36), !map !471"   --->   Operation 87 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 88 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_35), !map !475"   --->   Operation 88 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_34), !map !479"   --->   Operation 89 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 90 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_33), !map !483"   --->   Operation 90 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 91 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_32), !map !487"   --->   Operation 91 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_31), !map !491"   --->   Operation 92 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 93 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_30), !map !495"   --->   Operation 93 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 94 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_29), !map !499"   --->   Operation 94 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 95 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_28), !map !503"   --->   Operation 95 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 96 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_27), !map !507"   --->   Operation 96 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 97 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_26), !map !511"   --->   Operation 97 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 98 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_25), !map !515"   --->   Operation 98 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 99 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_24), !map !519"   --->   Operation 99 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 100 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_23), !map !523"   --->   Operation 100 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 101 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_22), !map !527"   --->   Operation 101 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 102 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_21), !map !531"   --->   Operation 102 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 103 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_20), !map !535"   --->   Operation 103 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 104 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_19), !map !539"   --->   Operation 104 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 105 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_18), !map !543"   --->   Operation 105 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 106 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_17), !map !547"   --->   Operation 106 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 107 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_16), !map !551"   --->   Operation 107 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 108 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_15), !map !555"   --->   Operation 108 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 109 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_14), !map !559"   --->   Operation 109 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 110 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_13), !map !563"   --->   Operation 110 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 111 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_12), !map !567"   --->   Operation 111 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 112 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_11), !map !571"   --->   Operation 112 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 113 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_10), !map !575"   --->   Operation 113 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 114 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_9), !map !579"   --->   Operation 114 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 115 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_8), !map !583"   --->   Operation 115 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 116 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_7), !map !587"   --->   Operation 116 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 117 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_6), !map !591"   --->   Operation 117 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 118 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_5), !map !595"   --->   Operation 118 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 119 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_4), !map !599"   --->   Operation 119 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 120 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_3), !map !603"   --->   Operation 120 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 121 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_2), !map !607"   --->   Operation 121 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 122 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_1), !map !611"   --->   Operation 122 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 123 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_0), !map !615"   --->   Operation 123 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 124 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16 %a) nounwind, !map !619"   --->   Operation 124 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 125 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16 %b) nounwind, !map !625"   --->   Operation 125 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 126 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %c) nounwind, !map !629"   --->   Operation 126 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 127 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([8 x i8]* @lec8Ex1_str) nounwind"   --->   Operation 127 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 128 [1/1] (0.00ns)   --->   "%c_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %c)" [arrpart_lec8Ex1.c:4]   --->   Operation 128 'read' 'c_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 129 [1/1] (0.00ns)   --->   "%b_read = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %b)" [arrpart_lec8Ex1.c:4]   --->   Operation 129 'read' 'b_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 130 [1/1] (0.00ns)   --->   "%a_read = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %a)" [arrpart_lec8Ex1.c:4]   --->   Operation 130 'read' 'a_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 131 [1/1] (0.00ns)   --->   "%sext_ln24 = sext i16 %a_read to i32" [arrpart_lec8Ex1.c:24]   --->   Operation 131 'sext' 'sext_ln24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 132 [1/1] (0.00ns)   --->   "%sext_ln34 = sext i16 %b_read to i17" [arrpart_lec8Ex1.c:34->arrpart_lec8Ex1.c:24]   --->   Operation 132 'sext' 'sext_ln34' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 133 [1/1] (5.49ns)   --->   "%res = mul i32 %c_read, %c_read" [arrpart_lec8Ex1.c:34->arrpart_lec8Ex1.c:24]   --->   Operation 133 'mul' 'res' <Predicate = true> <Delay = 5.49> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 5.49> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 134 [1/1] (1.34ns)   --->   "%add_ln24_1 = add i17 %sext_ln34, 39" [arrpart_lec8Ex1.c:24]   --->   Operation 134 'add' 'add_ln24_1' <Predicate = true> <Delay = 1.34> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 135 [1/1] (0.00ns)   --->   "%sext_ln24_1 = sext i17 %add_ln24_1 to i32" [arrpart_lec8Ex1.c:24]   --->   Operation 135 'sext' 'sext_ln24_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 136 [1/1] (0.87ns)   --->   "br label %1" [arrpart_lec8Ex1.c:17]   --->   Operation 136 'br' <Predicate = true> <Delay = 0.87>
+
+State 2 <SV = 1> <Delay = 7.04>
+ST_2 : Operation 137 [1/1] (0.00ns)   --->   "%i_0 = phi i6 [ 0, %0 ], [ %i, %3 ]"   --->   Operation 137 'phi' 'i_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 138 [1/1] (0.90ns)   --->   "%icmp_ln17 = icmp eq i6 %i_0, -4" [arrpart_lec8Ex1.c:17]   --->   Operation 138 'icmp' 'icmp_ln17' <Predicate = true> <Delay = 0.90> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.90> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 139 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 60, i64 60, i64 60) nounwind"   --->   Operation 139 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 140 [1/1] (1.18ns)   --->   "%i = add i6 %i_0, 1" [arrpart_lec8Ex1.c:17]   --->   Operation 140 'add' 'i' <Predicate = true> <Delay = 1.18> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 141 [1/1] (0.00ns)   --->   "br i1 %icmp_ln17, label %4, label %2" [arrpart_lec8Ex1.c:17]   --->   Operation 141 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 142 [1/1] (0.00ns)   --->   "%in_0_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_0)" [arrpart_lec8Ex1.c:19]   --->   Operation 142 'read' 'in_0_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 143 [1/1] (0.00ns)   --->   "%in_1_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_1)" [arrpart_lec8Ex1.c:19]   --->   Operation 143 'read' 'in_1_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 144 [1/1] (0.00ns)   --->   "%in_2_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_2)" [arrpart_lec8Ex1.c:19]   --->   Operation 144 'read' 'in_2_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 145 [1/1] (0.00ns)   --->   "%in_3_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_3)" [arrpart_lec8Ex1.c:19]   --->   Operation 145 'read' 'in_3_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 146 [1/1] (0.00ns)   --->   "%in_4_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_4)" [arrpart_lec8Ex1.c:19]   --->   Operation 146 'read' 'in_4_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 147 [1/1] (0.00ns)   --->   "%in_5_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_5)" [arrpart_lec8Ex1.c:19]   --->   Operation 147 'read' 'in_5_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 148 [1/1] (0.00ns)   --->   "%in_6_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_6)" [arrpart_lec8Ex1.c:19]   --->   Operation 148 'read' 'in_6_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 149 [1/1] (0.00ns)   --->   "%in_7_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_7)" [arrpart_lec8Ex1.c:19]   --->   Operation 149 'read' 'in_7_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 150 [1/1] (0.00ns)   --->   "%in_8_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_8)" [arrpart_lec8Ex1.c:19]   --->   Operation 150 'read' 'in_8_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 151 [1/1] (0.00ns)   --->   "%in_9_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_9)" [arrpart_lec8Ex1.c:19]   --->   Operation 151 'read' 'in_9_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 152 [1/1] (0.00ns)   --->   "%in_10_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_10)" [arrpart_lec8Ex1.c:19]   --->   Operation 152 'read' 'in_10_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 153 [1/1] (0.00ns)   --->   "%in_11_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_11)" [arrpart_lec8Ex1.c:19]   --->   Operation 153 'read' 'in_11_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 154 [1/1] (0.00ns)   --->   "%in_12_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_12)" [arrpart_lec8Ex1.c:19]   --->   Operation 154 'read' 'in_12_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 155 [1/1] (0.00ns)   --->   "%in_13_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_13)" [arrpart_lec8Ex1.c:19]   --->   Operation 155 'read' 'in_13_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 156 [1/1] (0.00ns)   --->   "%in_14_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_14)" [arrpart_lec8Ex1.c:19]   --->   Operation 156 'read' 'in_14_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 157 [1/1] (0.00ns)   --->   "%in_15_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_15)" [arrpart_lec8Ex1.c:19]   --->   Operation 157 'read' 'in_15_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 158 [1/1] (0.00ns)   --->   "%in_16_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_16)" [arrpart_lec8Ex1.c:19]   --->   Operation 158 'read' 'in_16_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 159 [1/1] (0.00ns)   --->   "%in_17_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_17)" [arrpart_lec8Ex1.c:19]   --->   Operation 159 'read' 'in_17_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 160 [1/1] (0.00ns)   --->   "%in_18_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_18)" [arrpart_lec8Ex1.c:19]   --->   Operation 160 'read' 'in_18_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 161 [1/1] (0.00ns)   --->   "%in_19_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_19)" [arrpart_lec8Ex1.c:19]   --->   Operation 161 'read' 'in_19_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 162 [1/1] (0.00ns)   --->   "%in_20_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_20)" [arrpart_lec8Ex1.c:19]   --->   Operation 162 'read' 'in_20_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 163 [1/1] (0.00ns)   --->   "%in_21_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_21)" [arrpart_lec8Ex1.c:19]   --->   Operation 163 'read' 'in_21_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 164 [1/1] (0.00ns)   --->   "%in_22_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_22)" [arrpart_lec8Ex1.c:19]   --->   Operation 164 'read' 'in_22_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 165 [1/1] (0.00ns)   --->   "%in_23_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_23)" [arrpart_lec8Ex1.c:19]   --->   Operation 165 'read' 'in_23_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 166 [1/1] (0.00ns)   --->   "%in_24_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_24)" [arrpart_lec8Ex1.c:19]   --->   Operation 166 'read' 'in_24_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 167 [1/1] (0.00ns)   --->   "%in_25_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_25)" [arrpart_lec8Ex1.c:19]   --->   Operation 167 'read' 'in_25_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 168 [1/1] (0.00ns)   --->   "%in_26_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_26)" [arrpart_lec8Ex1.c:19]   --->   Operation 168 'read' 'in_26_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 169 [1/1] (0.00ns)   --->   "%in_27_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_27)" [arrpart_lec8Ex1.c:19]   --->   Operation 169 'read' 'in_27_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 170 [1/1] (0.00ns)   --->   "%in_28_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_28)" [arrpart_lec8Ex1.c:19]   --->   Operation 170 'read' 'in_28_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 171 [1/1] (0.00ns)   --->   "%in_29_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_29)" [arrpart_lec8Ex1.c:19]   --->   Operation 171 'read' 'in_29_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 172 [1/1] (0.00ns)   --->   "%in_30_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_30)" [arrpart_lec8Ex1.c:19]   --->   Operation 172 'read' 'in_30_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 173 [1/1] (0.00ns)   --->   "%in_31_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_31)" [arrpart_lec8Ex1.c:19]   --->   Operation 173 'read' 'in_31_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 174 [1/1] (0.00ns)   --->   "%in_32_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_32)" [arrpart_lec8Ex1.c:19]   --->   Operation 174 'read' 'in_32_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 175 [1/1] (0.00ns)   --->   "%in_33_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_33)" [arrpart_lec8Ex1.c:19]   --->   Operation 175 'read' 'in_33_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 176 [1/1] (0.00ns)   --->   "%in_34_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_34)" [arrpart_lec8Ex1.c:19]   --->   Operation 176 'read' 'in_34_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 177 [1/1] (0.00ns)   --->   "%in_35_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_35)" [arrpart_lec8Ex1.c:19]   --->   Operation 177 'read' 'in_35_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 178 [1/1] (0.00ns)   --->   "%in_36_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_36)" [arrpart_lec8Ex1.c:19]   --->   Operation 178 'read' 'in_36_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 179 [1/1] (0.00ns)   --->   "%in_37_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_37)" [arrpart_lec8Ex1.c:19]   --->   Operation 179 'read' 'in_37_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 180 [1/1] (0.00ns)   --->   "%in_38_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_38)" [arrpart_lec8Ex1.c:19]   --->   Operation 180 'read' 'in_38_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 181 [1/1] (0.00ns)   --->   "%in_39_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_39)" [arrpart_lec8Ex1.c:19]   --->   Operation 181 'read' 'in_39_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 182 [1/1] (0.00ns)   --->   "%in_40_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_40)" [arrpart_lec8Ex1.c:19]   --->   Operation 182 'read' 'in_40_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 183 [1/1] (0.00ns)   --->   "%in_41_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_41)" [arrpart_lec8Ex1.c:19]   --->   Operation 183 'read' 'in_41_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 184 [1/1] (0.00ns)   --->   "%in_42_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_42)" [arrpart_lec8Ex1.c:19]   --->   Operation 184 'read' 'in_42_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 185 [1/1] (0.00ns)   --->   "%in_43_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_43)" [arrpart_lec8Ex1.c:19]   --->   Operation 185 'read' 'in_43_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 186 [1/1] (0.00ns)   --->   "%in_44_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_44)" [arrpart_lec8Ex1.c:19]   --->   Operation 186 'read' 'in_44_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 187 [1/1] (0.00ns)   --->   "%in_45_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_45)" [arrpart_lec8Ex1.c:19]   --->   Operation 187 'read' 'in_45_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 188 [1/1] (0.00ns)   --->   "%in_46_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_46)" [arrpart_lec8Ex1.c:19]   --->   Operation 188 'read' 'in_46_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 189 [1/1] (0.00ns)   --->   "%in_47_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_47)" [arrpart_lec8Ex1.c:19]   --->   Operation 189 'read' 'in_47_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 190 [1/1] (0.00ns)   --->   "%in_48_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_48)" [arrpart_lec8Ex1.c:19]   --->   Operation 190 'read' 'in_48_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 191 [1/1] (0.00ns)   --->   "%in_49_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_49)" [arrpart_lec8Ex1.c:19]   --->   Operation 191 'read' 'in_49_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 192 [1/1] (0.00ns)   --->   "%in_50_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_50)" [arrpart_lec8Ex1.c:19]   --->   Operation 192 'read' 'in_50_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 193 [1/1] (0.00ns)   --->   "%in_51_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_51)" [arrpart_lec8Ex1.c:19]   --->   Operation 193 'read' 'in_51_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 194 [1/1] (0.00ns)   --->   "%in_52_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_52)" [arrpart_lec8Ex1.c:19]   --->   Operation 194 'read' 'in_52_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 195 [1/1] (0.00ns)   --->   "%in_53_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_53)" [arrpart_lec8Ex1.c:19]   --->   Operation 195 'read' 'in_53_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 196 [1/1] (0.00ns)   --->   "%in_54_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_54)" [arrpart_lec8Ex1.c:19]   --->   Operation 196 'read' 'in_54_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 197 [1/1] (0.00ns)   --->   "%in_55_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_55)" [arrpart_lec8Ex1.c:19]   --->   Operation 197 'read' 'in_55_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 198 [1/1] (0.00ns)   --->   "%in_56_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_56)" [arrpart_lec8Ex1.c:19]   --->   Operation 198 'read' 'in_56_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 199 [1/1] (0.00ns)   --->   "%in_57_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_57)" [arrpart_lec8Ex1.c:19]   --->   Operation 199 'read' 'in_57_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 200 [1/1] (0.00ns)   --->   "%in_58_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_58)" [arrpart_lec8Ex1.c:19]   --->   Operation 200 'read' 'in_58_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 201 [1/1] (0.00ns)   --->   "%in_59_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %in_59)" [arrpart_lec8Ex1.c:19]   --->   Operation 201 'read' 'in_59_read' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 202 [1/1] (1.55ns)   --->   "%x = call i32 @_ssdm_op_Mux.ap_auto.60i32.i6(i32 %in_0_read, i32 %in_1_read, i32 %in_2_read, i32 %in_3_read, i32 %in_4_read, i32 %in_5_read, i32 %in_6_read, i32 %in_7_read, i32 %in_8_read, i32 %in_9_read, i32 %in_10_read, i32 %in_11_read, i32 %in_12_read, i32 %in_13_read, i32 %in_14_read, i32 %in_15_read, i32 %in_16_read, i32 %in_17_read, i32 %in_18_read, i32 %in_19_read, i32 %in_20_read, i32 %in_21_read, i32 %in_22_read, i32 %in_23_read, i32 %in_24_read, i32 %in_25_read, i32 %in_26_read, i32 %in_27_read, i32 %in_28_read, i32 %in_29_read, i32 %in_30_read, i32 %in_31_read, i32 %in_32_read, i32 %in_33_read, i32 %in_34_read, i32 %in_35_read, i32 %in_36_read, i32 %in_37_read, i32 %in_38_read, i32 %in_39_read, i32 %in_40_read, i32 %in_41_read, i32 %in_42_read, i32 %in_43_read, i32 %in_44_read, i32 %in_45_read, i32 %in_46_read, i32 %in_47_read, i32 %in_48_read, i32 %in_49_read, i32 %in_50_read, i32 %in_51_read, i32 %in_52_read, i32 %in_53_read, i32 %in_54_read, i32 %in_55_read, i32 %in_56_read, i32 %in_57_read, i32 %in_58_read, i32 %in_59_read, i6 %i_0)" [arrpart_lec8Ex1.c:19]   --->   Operation 202 'mux' 'x' <Predicate = (!icmp_ln17)> <Delay = 1.55> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.55> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 203 [1/1] (5.49ns)   --->   "%mul_ln24 = mul i32 %x, %sext_ln24" [arrpart_lec8Ex1.c:24]   --->   Operation 203 'mul' 'mul_ln24' <Predicate = (!icmp_ln17)> <Delay = 5.49> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 5.49> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 204 [1/1] (0.00ns)   --->   "ret void" [arrpart_lec8Ex1.c:28]   --->   Operation 204 'ret' <Predicate = (icmp_ln17)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 2.25>
+ST_3 : Operation 205 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([9 x i8]* @p_str2) nounwind" [arrpart_lec8Ex1.c:17]   --->   Operation 205 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 206 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln24 = add i32 %res, %mul_ln24" [arrpart_lec8Ex1.c:24]   --->   Operation 206 'add' 'add_ln24' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.12> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 207 [1/1] (2.25ns) (root node of TernaryAdder)   --->   "%y = add i32 %sext_ln24_1, %add_ln24" [arrpart_lec8Ex1.c:24]   --->   Operation 207 'add' 'y' <Predicate = true> <Delay = 2.25> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.12> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 208 [1/1] (0.92ns)   --->   "switch i6 %i_0, label %branch59 [
+    i6 0, label %branch0
+    i6 1, label %branch1
+    i6 2, label %branch2
+    i6 3, label %branch3
+    i6 4, label %branch4
+    i6 5, label %branch5
+    i6 6, label %branch6
+    i6 7, label %branch7
+    i6 8, label %branch8
+    i6 9, label %branch9
+    i6 10, label %branch10
+    i6 11, label %branch11
+    i6 12, label %branch12
+    i6 13, label %branch13
+    i6 14, label %branch14
+    i6 15, label %branch15
+    i6 16, label %branch16
+    i6 17, label %branch17
+    i6 18, label %branch18
+    i6 19, label %branch19
+    i6 20, label %branch20
+    i6 21, label %branch21
+    i6 22, label %branch22
+    i6 23, label %branch23
+    i6 24, label %branch24
+    i6 25, label %branch25
+    i6 26, label %branch26
+    i6 27, label %branch27
+    i6 28, label %branch28
+    i6 29, label %branch29
+    i6 30, label %branch30
+    i6 31, label %branch31
+    i6 -32, label %branch32
+    i6 -31, label %branch33
+    i6 -30, label %branch34
+    i6 -29, label %branch35
+    i6 -28, label %branch36
+    i6 -27, label %branch37
+    i6 -26, label %branch38
+    i6 -25, label %branch39
+    i6 -24, label %branch40
+    i6 -23, label %branch41
+    i6 -22, label %branch42
+    i6 -21, label %branch43
+    i6 -20, label %branch44
+    i6 -19, label %branch45
+    i6 -18, label %branch46
+    i6 -17, label %branch47
+    i6 -16, label %branch48
+    i6 -15, label %branch49
+    i6 -14, label %branch50
+    i6 -13, label %branch51
+    i6 -12, label %branch52
+    i6 -11, label %branch53
+    i6 -10, label %branch54
+    i6 -9, label %branch55
+    i6 -8, label %branch56
+    i6 -7, label %branch57
+    i6 -6, label %branch58
+  ]" [arrpart_lec8Ex1.c:26]   --->   Operation 208 'switch' <Predicate = true> <Delay = 0.92>
+ST_3 : Operation 209 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_58, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 209 'write' <Predicate = (i_0 == 58)> <Delay = 0.00>
+ST_3 : Operation 210 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 210 'br' <Predicate = (i_0 == 58)> <Delay = 0.00>
+ST_3 : Operation 211 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_57, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 211 'write' <Predicate = (i_0 == 57)> <Delay = 0.00>
+ST_3 : Operation 212 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 212 'br' <Predicate = (i_0 == 57)> <Delay = 0.00>
+ST_3 : Operation 213 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_56, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 213 'write' <Predicate = (i_0 == 56)> <Delay = 0.00>
+ST_3 : Operation 214 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 214 'br' <Predicate = (i_0 == 56)> <Delay = 0.00>
+ST_3 : Operation 215 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_55, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 215 'write' <Predicate = (i_0 == 55)> <Delay = 0.00>
+ST_3 : Operation 216 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 216 'br' <Predicate = (i_0 == 55)> <Delay = 0.00>
+ST_3 : Operation 217 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_54, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 217 'write' <Predicate = (i_0 == 54)> <Delay = 0.00>
+ST_3 : Operation 218 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 218 'br' <Predicate = (i_0 == 54)> <Delay = 0.00>
+ST_3 : Operation 219 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_53, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 219 'write' <Predicate = (i_0 == 53)> <Delay = 0.00>
+ST_3 : Operation 220 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 220 'br' <Predicate = (i_0 == 53)> <Delay = 0.00>
+ST_3 : Operation 221 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_52, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 221 'write' <Predicate = (i_0 == 52)> <Delay = 0.00>
+ST_3 : Operation 222 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 222 'br' <Predicate = (i_0 == 52)> <Delay = 0.00>
+ST_3 : Operation 223 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_51, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 223 'write' <Predicate = (i_0 == 51)> <Delay = 0.00>
+ST_3 : Operation 224 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 224 'br' <Predicate = (i_0 == 51)> <Delay = 0.00>
+ST_3 : Operation 225 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_50, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 225 'write' <Predicate = (i_0 == 50)> <Delay = 0.00>
+ST_3 : Operation 226 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 226 'br' <Predicate = (i_0 == 50)> <Delay = 0.00>
+ST_3 : Operation 227 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_49, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 227 'write' <Predicate = (i_0 == 49)> <Delay = 0.00>
+ST_3 : Operation 228 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 228 'br' <Predicate = (i_0 == 49)> <Delay = 0.00>
+ST_3 : Operation 229 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_48, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 229 'write' <Predicate = (i_0 == 48)> <Delay = 0.00>
+ST_3 : Operation 230 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 230 'br' <Predicate = (i_0 == 48)> <Delay = 0.00>
+ST_3 : Operation 231 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_47, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 231 'write' <Predicate = (i_0 == 47)> <Delay = 0.00>
+ST_3 : Operation 232 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 232 'br' <Predicate = (i_0 == 47)> <Delay = 0.00>
+ST_3 : Operation 233 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_46, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 233 'write' <Predicate = (i_0 == 46)> <Delay = 0.00>
+ST_3 : Operation 234 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 234 'br' <Predicate = (i_0 == 46)> <Delay = 0.00>
+ST_3 : Operation 235 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_45, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 235 'write' <Predicate = (i_0 == 45)> <Delay = 0.00>
+ST_3 : Operation 236 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 236 'br' <Predicate = (i_0 == 45)> <Delay = 0.00>
+ST_3 : Operation 237 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_44, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 237 'write' <Predicate = (i_0 == 44)> <Delay = 0.00>
+ST_3 : Operation 238 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 238 'br' <Predicate = (i_0 == 44)> <Delay = 0.00>
+ST_3 : Operation 239 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_43, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 239 'write' <Predicate = (i_0 == 43)> <Delay = 0.00>
+ST_3 : Operation 240 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 240 'br' <Predicate = (i_0 == 43)> <Delay = 0.00>
+ST_3 : Operation 241 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_42, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 241 'write' <Predicate = (i_0 == 42)> <Delay = 0.00>
+ST_3 : Operation 242 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 242 'br' <Predicate = (i_0 == 42)> <Delay = 0.00>
+ST_3 : Operation 243 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_41, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 243 'write' <Predicate = (i_0 == 41)> <Delay = 0.00>
+ST_3 : Operation 244 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 244 'br' <Predicate = (i_0 == 41)> <Delay = 0.00>
+ST_3 : Operation 245 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_40, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 245 'write' <Predicate = (i_0 == 40)> <Delay = 0.00>
+ST_3 : Operation 246 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 246 'br' <Predicate = (i_0 == 40)> <Delay = 0.00>
+ST_3 : Operation 247 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_39, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 247 'write' <Predicate = (i_0 == 39)> <Delay = 0.00>
+ST_3 : Operation 248 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 248 'br' <Predicate = (i_0 == 39)> <Delay = 0.00>
+ST_3 : Operation 249 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_38, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 249 'write' <Predicate = (i_0 == 38)> <Delay = 0.00>
+ST_3 : Operation 250 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 250 'br' <Predicate = (i_0 == 38)> <Delay = 0.00>
+ST_3 : Operation 251 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_37, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 251 'write' <Predicate = (i_0 == 37)> <Delay = 0.00>
+ST_3 : Operation 252 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 252 'br' <Predicate = (i_0 == 37)> <Delay = 0.00>
+ST_3 : Operation 253 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_36, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 253 'write' <Predicate = (i_0 == 36)> <Delay = 0.00>
+ST_3 : Operation 254 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 254 'br' <Predicate = (i_0 == 36)> <Delay = 0.00>
+ST_3 : Operation 255 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_35, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 255 'write' <Predicate = (i_0 == 35)> <Delay = 0.00>
+ST_3 : Operation 256 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 256 'br' <Predicate = (i_0 == 35)> <Delay = 0.00>
+ST_3 : Operation 257 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_34, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 257 'write' <Predicate = (i_0 == 34)> <Delay = 0.00>
+ST_3 : Operation 258 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 258 'br' <Predicate = (i_0 == 34)> <Delay = 0.00>
+ST_3 : Operation 259 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_33, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 259 'write' <Predicate = (i_0 == 33)> <Delay = 0.00>
+ST_3 : Operation 260 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 260 'br' <Predicate = (i_0 == 33)> <Delay = 0.00>
+ST_3 : Operation 261 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_32, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 261 'write' <Predicate = (i_0 == 32)> <Delay = 0.00>
+ST_3 : Operation 262 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 262 'br' <Predicate = (i_0 == 32)> <Delay = 0.00>
+ST_3 : Operation 263 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_31, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 263 'write' <Predicate = (i_0 == 31)> <Delay = 0.00>
+ST_3 : Operation 264 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 264 'br' <Predicate = (i_0 == 31)> <Delay = 0.00>
+ST_3 : Operation 265 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_30, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 265 'write' <Predicate = (i_0 == 30)> <Delay = 0.00>
+ST_3 : Operation 266 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 266 'br' <Predicate = (i_0 == 30)> <Delay = 0.00>
+ST_3 : Operation 267 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_29, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 267 'write' <Predicate = (i_0 == 29)> <Delay = 0.00>
+ST_3 : Operation 268 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 268 'br' <Predicate = (i_0 == 29)> <Delay = 0.00>
+ST_3 : Operation 269 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_28, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 269 'write' <Predicate = (i_0 == 28)> <Delay = 0.00>
+ST_3 : Operation 270 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 270 'br' <Predicate = (i_0 == 28)> <Delay = 0.00>
+ST_3 : Operation 271 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_27, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 271 'write' <Predicate = (i_0 == 27)> <Delay = 0.00>
+ST_3 : Operation 272 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 272 'br' <Predicate = (i_0 == 27)> <Delay = 0.00>
+ST_3 : Operation 273 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_26, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 273 'write' <Predicate = (i_0 == 26)> <Delay = 0.00>
+ST_3 : Operation 274 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 274 'br' <Predicate = (i_0 == 26)> <Delay = 0.00>
+ST_3 : Operation 275 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_25, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 275 'write' <Predicate = (i_0 == 25)> <Delay = 0.00>
+ST_3 : Operation 276 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 276 'br' <Predicate = (i_0 == 25)> <Delay = 0.00>
+ST_3 : Operation 277 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_24, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 277 'write' <Predicate = (i_0 == 24)> <Delay = 0.00>
+ST_3 : Operation 278 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 278 'br' <Predicate = (i_0 == 24)> <Delay = 0.00>
+ST_3 : Operation 279 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_23, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 279 'write' <Predicate = (i_0 == 23)> <Delay = 0.00>
+ST_3 : Operation 280 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 280 'br' <Predicate = (i_0 == 23)> <Delay = 0.00>
+ST_3 : Operation 281 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_22, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 281 'write' <Predicate = (i_0 == 22)> <Delay = 0.00>
+ST_3 : Operation 282 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 282 'br' <Predicate = (i_0 == 22)> <Delay = 0.00>
+ST_3 : Operation 283 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_21, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 283 'write' <Predicate = (i_0 == 21)> <Delay = 0.00>
+ST_3 : Operation 284 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 284 'br' <Predicate = (i_0 == 21)> <Delay = 0.00>
+ST_3 : Operation 285 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_20, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 285 'write' <Predicate = (i_0 == 20)> <Delay = 0.00>
+ST_3 : Operation 286 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 286 'br' <Predicate = (i_0 == 20)> <Delay = 0.00>
+ST_3 : Operation 287 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_19, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 287 'write' <Predicate = (i_0 == 19)> <Delay = 0.00>
+ST_3 : Operation 288 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 288 'br' <Predicate = (i_0 == 19)> <Delay = 0.00>
+ST_3 : Operation 289 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_18, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 289 'write' <Predicate = (i_0 == 18)> <Delay = 0.00>
+ST_3 : Operation 290 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 290 'br' <Predicate = (i_0 == 18)> <Delay = 0.00>
+ST_3 : Operation 291 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_17, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 291 'write' <Predicate = (i_0 == 17)> <Delay = 0.00>
+ST_3 : Operation 292 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 292 'br' <Predicate = (i_0 == 17)> <Delay = 0.00>
+ST_3 : Operation 293 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_16, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 293 'write' <Predicate = (i_0 == 16)> <Delay = 0.00>
+ST_3 : Operation 294 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 294 'br' <Predicate = (i_0 == 16)> <Delay = 0.00>
+ST_3 : Operation 295 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_15, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 295 'write' <Predicate = (i_0 == 15)> <Delay = 0.00>
+ST_3 : Operation 296 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 296 'br' <Predicate = (i_0 == 15)> <Delay = 0.00>
+ST_3 : Operation 297 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_14, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 297 'write' <Predicate = (i_0 == 14)> <Delay = 0.00>
+ST_3 : Operation 298 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 298 'br' <Predicate = (i_0 == 14)> <Delay = 0.00>
+ST_3 : Operation 299 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_13, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 299 'write' <Predicate = (i_0 == 13)> <Delay = 0.00>
+ST_3 : Operation 300 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 300 'br' <Predicate = (i_0 == 13)> <Delay = 0.00>
+ST_3 : Operation 301 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_12, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 301 'write' <Predicate = (i_0 == 12)> <Delay = 0.00>
+ST_3 : Operation 302 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 302 'br' <Predicate = (i_0 == 12)> <Delay = 0.00>
+ST_3 : Operation 303 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_11, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 303 'write' <Predicate = (i_0 == 11)> <Delay = 0.00>
+ST_3 : Operation 304 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 304 'br' <Predicate = (i_0 == 11)> <Delay = 0.00>
+ST_3 : Operation 305 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_10, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 305 'write' <Predicate = (i_0 == 10)> <Delay = 0.00>
+ST_3 : Operation 306 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 306 'br' <Predicate = (i_0 == 10)> <Delay = 0.00>
+ST_3 : Operation 307 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_9, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 307 'write' <Predicate = (i_0 == 9)> <Delay = 0.00>
+ST_3 : Operation 308 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 308 'br' <Predicate = (i_0 == 9)> <Delay = 0.00>
+ST_3 : Operation 309 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_8, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 309 'write' <Predicate = (i_0 == 8)> <Delay = 0.00>
+ST_3 : Operation 310 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 310 'br' <Predicate = (i_0 == 8)> <Delay = 0.00>
+ST_3 : Operation 311 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_7, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 311 'write' <Predicate = (i_0 == 7)> <Delay = 0.00>
+ST_3 : Operation 312 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 312 'br' <Predicate = (i_0 == 7)> <Delay = 0.00>
+ST_3 : Operation 313 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_6, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 313 'write' <Predicate = (i_0 == 6)> <Delay = 0.00>
+ST_3 : Operation 314 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 314 'br' <Predicate = (i_0 == 6)> <Delay = 0.00>
+ST_3 : Operation 315 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_5, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 315 'write' <Predicate = (i_0 == 5)> <Delay = 0.00>
+ST_3 : Operation 316 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 316 'br' <Predicate = (i_0 == 5)> <Delay = 0.00>
+ST_3 : Operation 317 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_4, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 317 'write' <Predicate = (i_0 == 4)> <Delay = 0.00>
+ST_3 : Operation 318 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 318 'br' <Predicate = (i_0 == 4)> <Delay = 0.00>
+ST_3 : Operation 319 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_3, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 319 'write' <Predicate = (i_0 == 3)> <Delay = 0.00>
+ST_3 : Operation 320 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 320 'br' <Predicate = (i_0 == 3)> <Delay = 0.00>
+ST_3 : Operation 321 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_2, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 321 'write' <Predicate = (i_0 == 2)> <Delay = 0.00>
+ST_3 : Operation 322 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 322 'br' <Predicate = (i_0 == 2)> <Delay = 0.00>
+ST_3 : Operation 323 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_1, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 323 'write' <Predicate = (i_0 == 1)> <Delay = 0.00>
+ST_3 : Operation 324 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 324 'br' <Predicate = (i_0 == 1)> <Delay = 0.00>
+ST_3 : Operation 325 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_0, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 325 'write' <Predicate = (i_0 == 0)> <Delay = 0.00>
+ST_3 : Operation 326 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 326 'br' <Predicate = (i_0 == 0)> <Delay = 0.00>
+ST_3 : Operation 327 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_59, i32 %y)" [arrpart_lec8Ex1.c:26]   --->   Operation 327 'write' <Predicate = (i_0 == 63) | (i_0 == 62) | (i_0 == 61) | (i_0 == 60) | (i_0 == 59)> <Delay = 0.00>
+ST_3 : Operation 328 [1/1] (0.00ns)   --->   "br label %3" [arrpart_lec8Ex1.c:26]   --->   Operation 328 'br' <Predicate = (i_0 == 63) | (i_0 == 62) | (i_0 == 61) | (i_0 == 60) | (i_0 == 59)> <Delay = 0.00>
+ST_3 : Operation 329 [1/1] (0.00ns)   --->   "br label %1" [arrpart_lec8Ex1.c:17]   --->   Operation 329 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 5.49ns
+The critical path consists of the following:
+	wire read on port 'c' (arrpart_lec8Ex1.c:4) [248]  (0 ns)
+	'mul' operation ('res', arrpart_lec8Ex1.c:34->arrpart_lec8Ex1.c:24) [253]  (5.49 ns)
+
+ <State 2>: 7.05ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', arrpart_lec8Ex1.c:17) [258]  (0 ns)
+	'mux' operation ('x', arrpart_lec8Ex1.c:19) [325]  (1.56 ns)
+	'mul' operation ('mul_ln24', arrpart_lec8Ex1.c:24) [326]  (5.49 ns)
+
+ <State 3>: 2.26ns
+The critical path consists of the following:
+	'add' operation ('add_ln24', arrpart_lec8Ex1.c:24) [327]  (0 ns)
+	'add' operation ('y', arrpart_lec8Ex1.c:24) [328]  (2.26 ns)
+	wire write on port 'out_58' (arrpart_lec8Ex1.c:26) [331]  (0 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

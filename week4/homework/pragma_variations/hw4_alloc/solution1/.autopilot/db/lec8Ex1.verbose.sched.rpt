@@ -1,0 +1,173 @@
+
+
+================================================================
+== Vivado HLS Report for 'lec8Ex1'
+================================================================
+* Date:           Tue May  9 13:36:53 2023
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        hw4_alloc
+* Solution:       solution1
+* Product family: kintex7
+* Target device:  xc7k160t-fbg484-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 7.756 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      181|      181| 1.810 us | 1.810 us |  181|  181|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------+---------+---------+----------+-----------+-----------+------+----------+
+        |            |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- for_Loop  |      180|      180|         3|          -|          -|    60|    no    |
+        +------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 7.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([60 x i32]* %in_r) nounwind, !map !19"   --->   Operation 5 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16 %a) nounwind, !map !25"   --->   Operation 6 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16 %b) nounwind, !map !31"   --->   Operation 7 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %c) nounwind, !map !35"   --->   Operation 8 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([60 x i32]* %out_r) nounwind, !map !39"   --->   Operation 9 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([8 x i8]* @lec8Ex1_str) nounwind"   --->   Operation 10 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%c_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %c) nounwind" [alloc_lec8Ex1.c:4]   --->   Operation 11 'read' 'c_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%b_read = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %b) nounwind" [alloc_lec8Ex1.c:4]   --->   Operation 12 'read' 'b_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%a_read = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %a) nounwind" [alloc_lec8Ex1.c:4]   --->   Operation 13 'read' 'a_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%sext_ln22 = sext i16 %a_read to i32" [alloc_lec8Ex1.c:22]   --->   Operation 14 'sext' 'sext_ln22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%sext_ln22_1 = sext i16 %b_read to i32" [alloc_lec8Ex1.c:22]   --->   Operation 15 'sext' 'sext_ln22_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (5.49ns)   --->   "%res = mul i32 %c_read, %c_read" [alloc_lec8Ex1.c:31->alloc_lec8Ex1.c:22]   --->   Operation 16 'mul' 'res' <Predicate = true> <Delay = 5.49> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 5.49> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (1.51ns)   --->   "%add_ln22 = add i32 %res, %sext_ln22_1" [alloc_lec8Ex1.c:22]   --->   Operation 17 'add' 'add_ln22' <Predicate = true> <Delay = 1.51> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 18 [1/1] (0.87ns)   --->   "br label %1" [alloc_lec8Ex1.c:14]   --->   Operation 18 'br' <Predicate = true> <Delay = 0.87>
+
+State 2 <SV = 1> <Delay = 2.26>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%i_0 = phi i6 [ 0, %0 ], [ %i, %for_Loop ]"   --->   Operation 19 'phi' 'i_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.90ns)   --->   "%icmp_ln14 = icmp eq i6 %i_0, -4" [alloc_lec8Ex1.c:14]   --->   Operation 20 'icmp' 'icmp_ln14' <Predicate = true> <Delay = 0.90> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.90> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 60, i64 60, i64 60) nounwind"   --->   Operation 21 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (1.18ns)   --->   "%i = add i6 %i_0, 1" [alloc_lec8Ex1.c:14]   --->   Operation 22 'add' 'i' <Predicate = true> <Delay = 1.18> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "br i1 %icmp_ln14, label %2, label %for_Loop" [alloc_lec8Ex1.c:14]   --->   Operation 23 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%zext_ln17 = zext i6 %i_0 to i64" [alloc_lec8Ex1.c:17]   --->   Operation 24 'zext' 'zext_ln17' <Predicate = (!icmp_ln14)> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%in_addr = getelementptr [60 x i32]* %in_r, i64 0, i64 %zext_ln17" [alloc_lec8Ex1.c:17]   --->   Operation 25 'getelementptr' 'in_addr' <Predicate = (!icmp_ln14)> <Delay = 0.00>
+ST_2 : Operation 26 [2/2] (2.26ns)   --->   "%x = load i32* %in_addr, align 4" [alloc_lec8Ex1.c:17]   --->   Operation 26 'load' 'x' <Predicate = (!icmp_ln14)> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 60> <RAM>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "ret void" [alloc_lec8Ex1.c:26]   --->   Operation 27 'ret' <Predicate = (icmp_ln14)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 7.75>
+ST_3 : Operation 28 [1/2] (2.26ns)   --->   "%x = load i32* %in_addr, align 4" [alloc_lec8Ex1.c:17]   --->   Operation 28 'load' 'x' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 60> <RAM>
+ST_3 : Operation 29 [1/1] (5.49ns)   --->   "%mul_ln22 = mul i32 %x, %sext_ln22" [alloc_lec8Ex1.c:22]   --->   Operation 29 'mul' 'mul_ln22' <Predicate = true> <Delay = 5.49> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 5.49> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 4.52>
+ST_4 : Operation 30 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([9 x i8]* @p_str) nounwind" [alloc_lec8Ex1.c:14]   --->   Operation 30 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 31 [1/1] (0.00ns)   --->   "%tmp_1 = call i32 (...)* @_ssdm_op_SpecRegionBegin([9 x i8]* @p_str) nounwind" [alloc_lec8Ex1.c:14]   --->   Operation 31 'specregionbegin' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 32 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln22_1 = add i32 %add_ln22, %mul_ln22" [alloc_lec8Ex1.c:22]   --->   Operation 32 'add' 'add_ln22_1' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.12> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 33 [1/1] (2.25ns) (root node of TernaryAdder)   --->   "%y = add i32 %add_ln22_1, 39" [alloc_lec8Ex1.c:22]   --->   Operation 33 'add' 'y' <Predicate = true> <Delay = 2.25> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.12> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 34 [1/1] (0.00ns)   --->   "%out_addr = getelementptr [60 x i32]* %out_r, i64 0, i64 %zext_ln17" [alloc_lec8Ex1.c:24]   --->   Operation 34 'getelementptr' 'out_addr' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 35 [1/1] (2.26ns)   --->   "store i32 %y, i32* %out_addr, align 4" [alloc_lec8Ex1.c:24]   --->   Operation 35 'store' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 60> <RAM>
+ST_4 : Operation 36 [1/1] (0.00ns)   --->   "%empty_2 = call i32 (...)* @_ssdm_op_SpecRegionEnd([9 x i8]* @p_str, i32 %tmp_1) nounwind" [alloc_lec8Ex1.c:25]   --->   Operation 36 'specregionend' 'empty_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 37 [1/1] (0.00ns)   --->   "br label %1" [alloc_lec8Ex1.c:14]   --->   Operation 37 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 7ns
+The critical path consists of the following:
+	wire read on port 'c' (alloc_lec8Ex1.c:4) [12]  (0 ns)
+	'mul' operation ('res', alloc_lec8Ex1.c:31->alloc_lec8Ex1.c:22) [17]  (5.49 ns)
+	'add' operation ('add_ln22', alloc_lec8Ex1.c:22) [18]  (1.51 ns)
+
+ <State 2>: 2.27ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', alloc_lec8Ex1.c:14) [21]  (0 ns)
+	'getelementptr' operation ('in_addr', alloc_lec8Ex1.c:17) [30]  (0 ns)
+	'load' operation ('x', alloc_lec8Ex1.c:17) on array 'in_r' [31]  (2.27 ns)
+
+ <State 3>: 7.76ns
+The critical path consists of the following:
+	'load' operation ('x', alloc_lec8Ex1.c:17) on array 'in_r' [31]  (2.27 ns)
+	'mul' operation ('mul_ln22', alloc_lec8Ex1.c:22) [32]  (5.49 ns)
+
+ <State 4>: 4.53ns
+The critical path consists of the following:
+	'add' operation ('add_ln22_1', alloc_lec8Ex1.c:22) [33]  (0 ns)
+	'add' operation ('y', alloc_lec8Ex1.c:22) [34]  (2.26 ns)
+	'store' operation ('store_ln24', alloc_lec8Ex1.c:24) of variable 'y', alloc_lec8Ex1.c:22 on array 'out_r' [36]  (2.27 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

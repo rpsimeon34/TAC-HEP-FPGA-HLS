@@ -1,0 +1,138 @@
+
+
+================================================================
+== Vivado HLS Report for 'lec8Ex1'
+================================================================
+* Date:           Tue May  9 14:00:31 2023
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        hw4_data
+* Solution:       solution1
+* Product family: kintex7
+* Target device:  xc7k160t-fbg484-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 7.756 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |       63|       63| 0.630 us | 0.630 us |   64|   64| dataflow |
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------+--------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                       |                    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |        Instance       |       Module       |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +-----------------------+--------------------+---------+---------+----------+----------+-----+-----+---------+
+        |Loop_for_Loop_proc_U0  |Loop_for_Loop_proc  |       63|       63| 0.630 us | 0.630 us |   63|   63|   none  |
+        +-----------------------+--------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  | URAM|
++-----------------+---------+-------+--------+--------+-----+
+|DSP              |        -|      -|       -|       -|    -|
+|Expression       |        -|      -|       -|       -|    -|
+|FIFO             |        -|      -|       -|       -|    -|
+|Instance         |        -|      5|     155|     215|    -|
+|Memory           |        -|      -|       -|       -|    -|
+|Multiplexer      |        -|      -|       -|       -|    -|
+|Register         |        -|      -|       -|       -|    -|
++-----------------+---------+-------+--------+--------+-----+
+|Total            |        0|      5|     155|     215|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Available        |      650|    600|  202800|  101400|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Utilization (%)  |        0|   ~0  |   ~0   |   ~0   |    0|
++-----------------+---------+-------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------+--------------------+---------+-------+-----+-----+-----+
+    |        Instance       |       Module       | BRAM_18K| DSP48E|  FF | LUT | URAM|
+    +-----------------------+--------------------+---------+-------+-----+-----+-----+
+    |Loop_for_Loop_proc_U0  |Loop_for_Loop_proc  |        0|      5|  155|  215|    0|
+    +-----------------------+--------------------+---------+-------+-----+-----+-----+
+    |Total                  |                    |        0|      5|  155|  215|    0|
+    +-----------------------+--------------------+---------+-------+-----+-----+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------+-----+-----+------------+--------------+--------------+
+|    RTL Ports   | Dir | Bits|  Protocol  | Source Object|    C Type    |
++----------------+-----+-----+------------+--------------+--------------+
+|in_r_address0   | out |    6|  ap_memory |     in_r     |     array    |
+|in_r_ce0        | out |    1|  ap_memory |     in_r     |     array    |
+|in_r_d0         | out |   32|  ap_memory |     in_r     |     array    |
+|in_r_q0         |  in |   32|  ap_memory |     in_r     |     array    |
+|in_r_we0        | out |    1|  ap_memory |     in_r     |     array    |
+|in_r_address1   | out |    6|  ap_memory |     in_r     |     array    |
+|in_r_ce1        | out |    1|  ap_memory |     in_r     |     array    |
+|in_r_d1         | out |   32|  ap_memory |     in_r     |     array    |
+|in_r_q1         |  in |   32|  ap_memory |     in_r     |     array    |
+|in_r_we1        | out |    1|  ap_memory |     in_r     |     array    |
+|a               |  in |   16|   ap_none  |       a      |    scalar    |
+|b               |  in |   16|   ap_none  |       b      |    scalar    |
+|c               |  in |   32|   ap_none  |       c      |    scalar    |
+|out_r_address0  | out |    6|  ap_memory |     out_r    |     array    |
+|out_r_ce0       | out |    1|  ap_memory |     out_r    |     array    |
+|out_r_d0        | out |   32|  ap_memory |     out_r    |     array    |
+|out_r_q0        |  in |   32|  ap_memory |     out_r    |     array    |
+|out_r_we0       | out |    1|  ap_memory |     out_r    |     array    |
+|out_r_address1  | out |    6|  ap_memory |     out_r    |     array    |
+|out_r_ce1       | out |    1|  ap_memory |     out_r    |     array    |
+|out_r_d1        | out |   32|  ap_memory |     out_r    |     array    |
+|out_r_q1        |  in |   32|  ap_memory |     out_r    |     array    |
+|out_r_we1       | out |    1|  ap_memory |     out_r    |     array    |
+|ap_clk          |  in |    1| ap_ctrl_hs |    lec8Ex1   | return value |
+|ap_rst          |  in |    1| ap_ctrl_hs |    lec8Ex1   | return value |
+|ap_start        |  in |    1| ap_ctrl_hs |    lec8Ex1   | return value |
+|ap_done         | out |    1| ap_ctrl_hs |    lec8Ex1   | return value |
+|ap_ready        | out |    1| ap_ctrl_hs |    lec8Ex1   | return value |
+|ap_idle         | out |    1| ap_ctrl_hs |    lec8Ex1   | return value |
++----------------+-----+-----+------------+--------------+--------------+
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="inline_lec8Ex1.c" path="/afs/hep.wisc.edu/user/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week4/homework/pragma_variations/inline_lec8Ex1.c"/>
+  </source>
+  <testbench>
+    <originFiles name="lec8Ex1_out_ref.dat" path="/afs/hep.wisc.edu/user/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week4/homework/pragma_variations/lec8Ex1_out_ref.dat"/>
+    <originFiles name="lec8Ex1_tb.c" path="/afs/hep.wisc.edu/user/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week4/homework/pragma_variations/lec8Ex1_tb.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

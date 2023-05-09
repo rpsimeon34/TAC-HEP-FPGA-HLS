@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1683659320000">
+  <ports id="1" name="in_r" type="PortType" originalName="in" coreName="RAM" bitwidth="32" iftype="IfTypeRegister" arraysize="60">
+    <dataOutputObjs>load</dataOutputObjs>
+  </ports>
+  <ports id="2" name="a" type="PortType" originalName="a" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="b" type="PortType" originalName="b" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="4" name="c" type="PortType" originalName="c" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="5" name="out_r" type="PortType" originalName="out" coreName="RAM" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="60"/>
+  <edges id="43" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="46" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="48" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="51" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="52" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="57" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="60" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="61" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.1/@node_objs.0" is_back_edge="1"/>
+  <edges id="62" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.0" is_back_edge="1"/>
+  <edges id="63" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="66" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="69" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="70" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="71" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="78" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="80" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.2/@node_objs.2"/>
+  <edges id="81" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.2/@node_objs.2"/>
+  <edges id="83" source_obj="//@blocks.2/@node_objs.2" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="87" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.4"/>
+  <edges id="89" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2/@node_objs.5"/>
+  <edges id="117" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="118" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3"/>
+  <edges id="119" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="120" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1" is_back_edge="1"/>
+  <edges id="-1" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="-1" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="-1" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="-1" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.4"/>
+  <edges id="-1" source_obj="//@ports.0" sink_obj="//@blocks.2/@node_objs.0"/>
+  <blocks id="21" name="block_21" type="BlockType">
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_27</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="c_read" lineNumber="4" originalName="c" fileName="inline_lec8Ex1.c" fileDirectory=".." contextFuncName="lec8Ex1" bitwidth="32" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="inline_lec8Ex1.c" linenumber="4" fileDirectory="/afs/hep.wisc.edu/home/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week4/homework/pragma_variations" functionName="lec8Ex1"/>
+      <dataInputObjs>c</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="b_read" lineNumber="4" originalName="b" fileName="inline_lec8Ex1.c" fileDirectory=".." contextFuncName="lec8Ex1" bitwidth="16" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="inline_lec8Ex1.c" linenumber="4" fileDirectory="/afs/hep.wisc.edu/home/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week4/homework/pragma_variations" functionName="lec8Ex1"/>
+      <dataInputObjs>b</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="a_read" lineNumber="4" originalName="a" fileName="inline_lec8Ex1.c" fileDirectory=".." contextFuncName="lec8Ex1" bitwidth="16" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="inline_lec8Ex1.c" linenumber="4" fileDirectory="/afs/hep.wisc.edu/home/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week4/homework/pragma_variations" functionName="lec8Ex1"/>
+      <dataInputObjs>a</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="res" lineNumber="31" originalName="res" fileName="inline_lec8Ex1.c" fileDirectory=".." rtlName="res_fu_101_p2" contextFuncName="squared" bitwidth="32" opcode="mul" m_display="0" m_delay="5.49" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="inline_lec8Ex1.c" linenumber="21" fileDirectory="/afs/hep.wisc.edu/home/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week4/homework/pragma_variations" functionName="lec8Ex1"/>
+      <inlineStackInfo fileName="inline_lec8Ex1.c" linenumber="31" fileDirectory="/afs/hep.wisc.edu/home/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week4/homework/pragma_variations" functionName="squared"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="add_ln21_1" lineNumber="21" fileName="inline_lec8Ex1.c" fileDirectory=".." rtlName="add_ln21_1_fu_107_p2" contextFuncName="lec8Ex1" bitwidth="17" opcode="add" m_display="0" m_delay="1.34" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="inline_lec8Ex1.c" linenumber="21" fileDirectory="/afs/hep.wisc.edu/home/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week4/homework/pragma_variations" functionName="lec8Ex1"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="_ln14" lineNumber="14" fileName="inline_lec8Ex1.c" fileDirectory=".." contextFuncName="lec8Ex1" opcode="br" m_display="0" m_delay="0.87" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="inline_lec8Ex1.c" linenumber="14" fileDirectory="/afs/hep.wisc.edu/home/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week4/homework/pragma_variations" functionName="lec8Ex1"/>
+      <controlInputObjs>block_27</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="inline_lec8Ex1.c">
+      <validLinenumbers>4</validLinenumbers>
+      <validLinenumbers>31</validLinenumbers>
+      <validLinenumbers>21</validLinenumbers>
+      <validLinenumbers>14</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="27" name="block_27" type="BlockType">
+    <controlInputObjs>block_21</controlInputObjs>
+    <controlInputObjs>block_38</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_40</controlOutputObjs>
+    <controlOutputObjs>block_38</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="i_0" originalName="i" bitwidth="6" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <controlInputObjs>block_21</controlInputObjs>
+      <controlInputObjs>block_38</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="icmp_ln14" lineNumber="14" fileName="inline_lec8Ex1.c" fileDirectory=".." rtlName="icmp_ln14_fu_117_p2" contextFuncName="lec8Ex1" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.9" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="inline_lec8Ex1.c" linenumber="14" fileDirectory="/afs/hep.wisc.edu/home/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week4/homework/pragma_variations" functionName="lec8Ex1"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="i" lineNumber="14" originalName="i" fileName="inline_lec8Ex1.c" fileDirectory=".." rtlName="i_fu_123_p2" contextFuncName="lec8Ex1" bitwidth="6" opcode="add" nodeLabel="1.0" m_display="0" m_delay="1.18" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="inline_lec8Ex1.c" linenumber="14" fileDirectory="/afs/hep.wisc.edu/home/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week4/homework/pragma_variations" functionName="lec8Ex1"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="_ln14" lineNumber="14" fileName="inline_lec8Ex1.c" fileDirectory=".." contextFuncName="lec8Ex1" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="inline_lec8Ex1.c" linenumber="14" fileDirectory="/afs/hep.wisc.edu/home/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week4/homework/pragma_variations" functionName="lec8Ex1"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>block_38</controlInputObjs>
+      <controlInputObjs>block_40</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="inline_lec8Ex1.c">
+      <validLinenumbers>14</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="38" name="block_38" type="BlockType">
+    <controlInputObjs>block_27</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_27</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="x" lineNumber="16" originalName="x" fileName="inline_lec8Ex1.c" fileDirectory=".." contextFuncName="lec8Ex1" bitwidth="32" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="2.26" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="inline_lec8Ex1.c" linenumber="16" fileDirectory="/afs/hep.wisc.edu/home/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week4/homework/pragma_variations" functionName="lec8Ex1"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>in_r</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="mul_ln21" lineNumber="21" fileName="inline_lec8Ex1.c" fileDirectory=".." rtlName="mul_ln21_fu_134_p2" contextFuncName="lec8Ex1" bitwidth="32" opcode="mul" nodeLabel="2.0" m_display="0" m_delay="5.49" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="inline_lec8Ex1.c" linenumber="21" fileDirectory="/afs/hep.wisc.edu/home/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week4/homework/pragma_variations" functionName="lec8Ex1"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="add_ln21" lineNumber="21" fileName="inline_lec8Ex1.c" fileDirectory=".." rtlName="add_ln21_fu_139_p2" contextFuncName="lec8Ex1" bitwidth="32" opcode="add" nodeLabel="3.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="inline_lec8Ex1.c" linenumber="21" fileDirectory="/afs/hep.wisc.edu/home/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week4/homework/pragma_variations" functionName="lec8Ex1"/>
+      <dataInputObjs>mul</dataInputObjs>
+      <dataInputObjs>mul</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="y" lineNumber="21" originalName="y" fileName="inline_lec8Ex1.c" fileDirectory=".." rtlName="out_r_d0" contextFuncName="lec8Ex1" bitwidth="32" opcode="add" nodeLabel="3.0" m_display="0" m_delay="2.25" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="inline_lec8Ex1.c" linenumber="21" fileDirectory="/afs/hep.wisc.edu/home/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week4/homework/pragma_variations" functionName="lec8Ex1"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="out_addr_write_ln23" lineNumber="23" fileName="inline_lec8Ex1.c" fileDirectory=".." contextFuncName="lec8Ex1" opcode="store" nodeLabel="3.0" m_display="0" m_delay="2.26" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="inline_lec8Ex1.c" linenumber="23" fileDirectory="/afs/hep.wisc.edu/home/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week4/homework/pragma_variations" functionName="lec8Ex1"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="_ln14" lineNumber="14" fileName="inline_lec8Ex1.c" fileDirectory=".." contextFuncName="lec8Ex1" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="inline_lec8Ex1.c" linenumber="14" fileDirectory="/afs/hep.wisc.edu/home/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week4/homework/pragma_variations" functionName="lec8Ex1"/>
+      <controlInputObjs>block_27</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="inline_lec8Ex1.c">
+      <validLinenumbers>16</validLinenumbers>
+      <validLinenumbers>21</validLinenumbers>
+      <validLinenumbers>23</validLinenumbers>
+      <validLinenumbers>14</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="40" name="block_40" type="BlockType">
+    <controlInputObjs>block_27</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="_ln25" lineNumber="25" fileName="inline_lec8Ex1.c" fileDirectory=".." contextFuncName="lec8Ex1" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="inline_lec8Ex1.c" linenumber="25" fileDirectory="/afs/hep.wisc.edu/home/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week4/homework/pragma_variations" functionName="lec8Ex1"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="inline_lec8Ex1.c">
+      <validLinenumbers>25</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <regnodes realName="in_addr_reg_177">
+    <nodeIds>30</nodeIds>
+  </regnodes>
+  <regnodes realName="res_reg_154">
+    <nodeIds>17</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln16_reg_172">
+    <nodeIds>29</nodeIds>
+  </regnodes>
+  <regnodes realName="i_reg_167">
+    <nodeIds>25</nodeIds>
+  </regnodes>
+  <regnodes realName="sext_ln21_1_reg_159">
+    <nodeIds>19</nodeIds>
+  </regnodes>
+  <regnodes realName="sext_ln21_reg_149">
+    <nodeIds>15</nodeIds>
+  </regnodes>
+  <regnodes realName="i_0_reg_82">
+    <nodeIds>22</nodeIds>
+  </regnodes>
+  <regnodes realName="mul_ln21_reg_182">
+    <nodeIds>32</nodeIds>
+  </regnodes>
+  <expressionNodes realName="sext_ln21_fu_93">
+    <nodeIds>15</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln14_fu_117">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln21_1_fu_113">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_0_phi_fu_86">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_fu_123">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="out_addr_gep_fu_69">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="y_fu_143">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_addr_gep_fu_56">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="res_fu_101">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln21_fu_139">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln31_fu_97">
+    <nodeIds>16</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln21_1_fu_107">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln16_fu_129">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mul_ln21_fu_134">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="a_read_read_fu_50">
+    <nodeIds>14</nodeIds>
+  </ioNodes>
+  <ioNodes realName="b_read_read_fu_44">
+    <nodeIds>13</nodeIds>
+  </ioNodes>
+  <ioNodes realName="c_read_read_fu_38">
+    <nodeIds>12</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="in_r">
+    <nodeIds>31</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="out_r">
+    <nodeIds>36</nodeIds>
+  </memoryPorts>
+  <ioPorts name="a">
+    <contents name="read">
+      <nodeIds>14</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="b">
+    <contents name="read">
+      <nodeIds>13</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="c">
+    <contents name="read">
+      <nodeIds>12</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="in_r(p0)">
+    <contents name="load">
+      <nodeIds>31</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="out_r(p0)">
+    <contents name="store">
+      <nodeIds>36</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="2" latency="2"/>
+      <operations id="39" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="31" stage="1" latency="2"/>
+      <operations id="32" stage="1" latency="1"/>
+    </states>
+    <states id="4">
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="2">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="lec8Ex1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="181" mMaxLatency="181">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>21</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="for_Loop" mII="-1" mDepth="-1" mMinTripCount="60" mMaxTripCount="60" mMinLatency="180" mMaxLatency="180" mType="1">
+      <basicBlocks>27</basicBlocks>
+      <basicBlocks>38</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>40</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>
