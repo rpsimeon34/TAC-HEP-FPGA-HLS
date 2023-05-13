@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [HLS 200-40] In file included from ex3apint.cpp:1:&#xA;In file included from ./ex3apint.h:5:&#xA;/opt/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_cint.h:59:2: warning: This header file cannot be used in a C++ design. C-synthesis will fail.  [-W#warnings]&#xA;#warning This header file cannot be used in a C++ design. C-synthesis will fail. &#xA; ^&#xA;1 warning generated." projectName="Exercise3_apint" solutionName="solution1" date="2023-05-12T18:13:11.670-0500" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

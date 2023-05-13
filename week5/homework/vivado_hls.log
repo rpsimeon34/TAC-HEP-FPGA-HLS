@@ -1,0 +1,59 @@
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'rsimeon' on host 'cmstrigger02.hep.wisc.edu' (Linux_x86_64 version 5.4.240-1.el7.elrepo.x86_64) on Fri May 12 19:09:41 CDT 2023
+INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core)"
+INFO: [HLS 200-10] In directory '/afs/hep.wisc.edu/user/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week5/homework'
+Sourcing Tcl script '/afs/hep.wisc.edu/user/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week5/homework/Exercise4_struct/solution1/csynth.tcl'
+INFO: [HLS 200-10] Opening project '/afs/hep.wisc.edu/user/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week5/homework/Exercise4_struct'.
+INFO: [HLS 200-10] Adding design file 'ex4struct.c' to the project
+INFO: [HLS 200-10] Adding test bench file 'ex4struct_tb.c' to the project
+INFO: [HLS 200-10] Opening solution '/afs/hep.wisc.edu/user/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week5/homework/Exercise4_struct/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7k160t-fbg484-2'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'ex4struct.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1775.270 ; gain = 1248.910 ; free physical = 74077 ; free virtual = 110389
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1775.270 ; gain = 1248.910 ; free physical = 74077 ; free virtual = 110389
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1775.270 ; gain = 1248.910 ; free physical = 74077 ; free virtual = 110389
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1775.270 ; gain = 1248.910 ; free physical = 74077 ; free virtual = 110388
+INFO: [XFORM 203-11] Balancing expressions in function 'ex4' (ex4struct.c:3)...9 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1775.270 ; gain = 1248.910 ; free physical = 74063 ; free virtual = 110375
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1775.270 ; gain = 1248.910 ; free physical = 74063 ; free virtual = 110375
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'ex4' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ex4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 17.07 seconds; current allocated memory: 136.380 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 136.497 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ex4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'ex4/A_A1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ex4/A_A2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ex4/A_A3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ex4/A_A4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ex4/A_A5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ex4/A_A6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ex4/A_A7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ex4/A_A8' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ex4/A_A9' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ex4/A_A10' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ex4/B' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'ex4' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ex4'.
+INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 136.717 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 147.56 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1775.270 ; gain = 1248.910 ; free physical = 74057 ; free virtual = 110370
+INFO: [VHDL 208-304] Generating VHDL RTL for ex4.
+INFO: [VLOG 209-307] Generating Verilog RTL for ex4.
+INFO: [HLS 200-112] Total elapsed time: 19.97 seconds; peak allocated memory: 136.717 MB.

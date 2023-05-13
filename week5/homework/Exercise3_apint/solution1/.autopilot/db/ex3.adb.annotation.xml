@@ -1,0 +1,6 @@
+<annotationInfo>
+<item  id="10" filename="ex3apint.cpp" linenumber="10" name="x_V" contextFuncName="ex3" moduleName="ex3" rtlName="ex3_sdiv_6s_6ns_6bkb_U1" latency="9" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/afs/hep.wisc.edu/home/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week5/homework"><\/item>
+<item  id="11" filename="ex3apint.cpp" linenumber="11" name="y_V" contextFuncName="ex3" moduleName="ex3" rtlName="ex3_mac_muladd_6scud_U2" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/afs/hep.wisc.edu/home/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week5/homework"><\/item>
+<item  id="12" filename="ex3apint.cpp" linenumber="12" name="z_V" contextFuncName="ex3" moduleName="ex3" rtlName="grp_fu_45_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="15" fileDirectory="/afs/hep.wisc.edu/home/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week5/homework"><\/item>
+<item  id="13" filename="ex3apint.cpp" linenumber="13" name="add_ln68" contextFuncName="ex3" moduleName="ex3" rtlName="ex3_mac_muladd_6scud_U2" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/afs/hep.wisc.edu/home/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week5/homework"><\/item>
+</annotationInfo>

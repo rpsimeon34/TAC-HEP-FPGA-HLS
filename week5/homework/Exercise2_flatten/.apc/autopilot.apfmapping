@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="ex2_flatten.c" path="/afs/hep.wisc.edu/user/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week5/homework/ex2_flatten.c"/>
+  </source>
+  <testbench>
+    <originFiles name="ex2_out_ref.dat" path="/afs/hep.wisc.edu/user/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week5/homework/ex2_out_ref.dat"/>
+    <originFiles name="ex2_tb.c" path="/afs/hep.wisc.edu/user/rsimeon/tac_hep_fpga/TAC-HEP-FPGA-HLS/week5/homework/ex2_tb.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

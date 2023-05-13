@@ -1,0 +1,147 @@
+
+
+================================================================
+== Vivado HLS Report for 'ex4'
+================================================================
+* Date:           Fri May 12 18:50:45 2023
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        Exercise4_array
+* Solution:       solution1
+* Product family: kintex7
+* Target device:  xc7k160t-fbg484-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 2.662 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       21|       21| 0.210 us | 0.210 us |   21|   21|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- LOOP_I  |       20|       20|         2|          -|          -|    10|    no    |
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.87>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([10 x i32]* %A) nounwind, !map !7"   --->   Operation 4 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %B) nounwind, !map !13"   --->   Operation 5 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([4 x i8]* @ex4_str) nounwind"   --->   Operation 6 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.87ns)   --->   "br label %1" [ex4arr.c:7]   --->   Operation 7 'br' <Predicate = true> <Delay = 0.87>
+
+State 2 <SV = 1> <Delay = 1.14>
+ST_2 : Operation 8 [1/1] (0.00ns)   --->   "%i_0 = phi i4 [ 0, %0 ], [ %i, %2 ]"   --->   Operation 8 'phi' 'i_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%acc_0 = phi i32 [ 0, %0 ], [ %acc, %2 ]"   --->   Operation 9 'phi' 'acc_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (0.86ns)   --->   "%icmp_ln7 = icmp eq i4 %i_0, -6" [ex4arr.c:7]   --->   Operation 10 'icmp' 'icmp_ln7' <Predicate = true> <Delay = 0.86> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10) nounwind"   --->   Operation 11 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (1.01ns)   --->   "%i = add i4 %i_0, 1" [ex4arr.c:7]   --->   Operation 12 'add' 'i' <Predicate = true> <Delay = 1.01> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.51> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "br i1 %icmp_ln7, label %3, label %2" [ex4arr.c:7]   --->   Operation 13 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%zext_ln8 = zext i4 %i_0 to i64" [ex4arr.c:8]   --->   Operation 14 'zext' 'zext_ln8' <Predicate = (!icmp_ln7)> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%A_addr = getelementptr [10 x i32]* %A, i64 0, i64 %zext_ln8" [ex4arr.c:8]   --->   Operation 15 'getelementptr' 'A_addr' <Predicate = (!icmp_ln7)> <Delay = 0.00>
+ST_2 : Operation 16 [2/2] (1.14ns)   --->   "%A_load = load i32* %A_addr, align 4" [ex4arr.c:8]   --->   Operation 16 'load' 'A_load' <Predicate = (!icmp_ln7)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %B, i32 %acc_0) nounwind" [ex4arr.c:10]   --->   Operation 17 'write' <Predicate = (icmp_ln7)> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "ret void" [ex4arr.c:11]   --->   Operation 18 'ret' <Predicate = (icmp_ln7)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 2.66>
+ST_3 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([7 x i8]* @p_str) nounwind" [ex4arr.c:7]   --->   Operation 19 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 20 [1/2] (1.14ns)   --->   "%A_load = load i32* %A_addr, align 4" [ex4arr.c:8]   --->   Operation 20 'load' 'A_load' <Predicate = true> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_3 : Operation 21 [1/1] (1.51ns)   --->   "%acc = add nsw i32 %A_load, %acc_0" [ex4arr.c:8]   --->   Operation 21 'add' 'acc' <Predicate = true> <Delay = 1.51> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.51> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "br label %1" [ex4arr.c:7]   --->   Operation 22 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 0.872ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', ex4arr.c:7) [8]  (0.872 ns)
+
+ <State 2>: 1.15ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', ex4arr.c:7) [8]  (0 ns)
+	'getelementptr' operation ('A_addr', ex4arr.c:8) [17]  (0 ns)
+	'load' operation ('A_load', ex4arr.c:8) on array 'A' [18]  (1.15 ns)
+
+ <State 3>: 2.66ns
+The critical path consists of the following:
+	'load' operation ('A_load', ex4arr.c:8) on array 'A' [18]  (1.15 ns)
+	'add' operation ('acc', ex4arr.c:8) [19]  (1.51 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

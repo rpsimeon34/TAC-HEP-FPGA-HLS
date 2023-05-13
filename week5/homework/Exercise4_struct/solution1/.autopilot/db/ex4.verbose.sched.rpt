@@ -1,0 +1,141 @@
+
+
+================================================================
+== Vivado HLS Report for 'ex4'
+================================================================
+* Date:           Fri May 12 19:09:58 2023
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        Exercise4_struct
+* Solution:       solution1
+* Product family: kintex7
+* Target device:  xc7k160t-fbg484-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 6.777 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|   0 ns   |   0 ns   |    0|    0|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 0
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 6.77>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %A_A1), !map !7"   --->   Operation 2 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %A_A2), !map !13"   --->   Operation 3 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %A_A3), !map !17"   --->   Operation 4 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %A_A4), !map !21"   --->   Operation 5 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %A_A5), !map !25"   --->   Operation 6 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %A_A6), !map !29"   --->   Operation 7 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %A_A7), !map !33"   --->   Operation 8 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %A_A8), !map !37"   --->   Operation 9 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %A_A9), !map !41"   --->   Operation 10 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %A_A10), !map !45"   --->   Operation 11 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %B), !map !49"   --->   Operation 12 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([4 x i8]* @ex4_str) nounwind"   --->   Operation 13 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%A_A10_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %A_A10)" [ex4struct.c:3]   --->   Operation 14 'read' 'A_A10_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%A_A9_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %A_A9)" [ex4struct.c:3]   --->   Operation 15 'read' 'A_A9_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%A_A8_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %A_A8)" [ex4struct.c:3]   --->   Operation 16 'read' 'A_A8_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%A_A7_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %A_A7)" [ex4struct.c:3]   --->   Operation 17 'read' 'A_A7_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%A_A6_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %A_A6)" [ex4struct.c:3]   --->   Operation 18 'read' 'A_A6_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%A_A5_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %A_A5)" [ex4struct.c:3]   --->   Operation 19 'read' 'A_A5_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%A_A4_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %A_A4)" [ex4struct.c:3]   --->   Operation 20 'read' 'A_A4_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%A_A3_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %A_A3)" [ex4struct.c:3]   --->   Operation 21 'read' 'A_A3_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%A_A2_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %A_A2)" [ex4struct.c:3]   --->   Operation 22 'read' 'A_A2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%A_A1_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %A_A1)" [ex4struct.c:3]   --->   Operation 23 'read' 'A_A1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (1.51ns)   --->   "%add_ln16 = add i32 %A_A2_read, %A_A1_read" [ex4struct.c:16]   --->   Operation 24 'add' 'add_ln16' <Predicate = true> <Delay = 1.51> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.51> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 25 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln16_1 = add i32 %A_A4_read, %A_A5_read" [ex4struct.c:16]   --->   Operation 25 'add' 'add_ln16_1' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.12> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 26 [1/1] (2.25ns) (root node of TernaryAdder)   --->   "%add_ln16_2 = add i32 %add_ln16_1, %A_A3_read" [ex4struct.c:16]   --->   Operation 26 'add' 'add_ln16_2' <Predicate = true> <Delay = 2.25> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.12> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 27 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln16_3 = add i32 %add_ln16_2, %add_ln16" [ex4struct.c:16]   --->   Operation 27 'add' 'add_ln16_3' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.12> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 28 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln16_4 = add i32 %A_A6_read, %A_A7_read" [ex4struct.c:16]   --->   Operation 28 'add' 'add_ln16_4' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.12> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 29 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln16_5 = add i32 %A_A9_read, %A_A10_read" [ex4struct.c:16]   --->   Operation 29 'add' 'add_ln16_5' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.12> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 30 [1/1] (2.25ns) (root node of TernaryAdder)   --->   "%add_ln16_6 = add i32 %add_ln16_5, %A_A8_read" [ex4struct.c:16]   --->   Operation 30 'add' 'add_ln16_6' <Predicate = true> <Delay = 2.25> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.12> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 31 [1/1] (2.25ns) (root node of TernaryAdder)   --->   "%add_ln16_7 = add i32 %add_ln16_6, %add_ln16_4" [ex4struct.c:16]   --->   Operation 31 'add' 'add_ln16_7' <Predicate = true> <Delay = 2.25> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.12> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 32 [1/1] (2.25ns) (root node of TernaryAdder)   --->   "%acc = add i32 %add_ln16_7, %add_ln16_3" [ex4struct.c:16]   --->   Operation 32 'add' 'acc' <Predicate = true> <Delay = 2.25> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.12> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %B, i32 %acc)" [ex4struct.c:18]   --->   Operation 33 'write' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "ret void" [ex4struct.c:19]   --->   Operation 34 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 6.78ns
+The critical path consists of the following:
+	wire read on port 'A_A10' (ex4struct.c:3) [24]  (0 ns)
+	'add' operation ('add_ln16_5', ex4struct.c:16) [39]  (0 ns)
+	'add' operation ('add_ln16_6', ex4struct.c:16) [40]  (2.26 ns)
+	'add' operation ('add_ln16_7', ex4struct.c:16) [41]  (2.26 ns)
+	'add' operation ('acc', ex4struct.c:16) [42]  (2.26 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

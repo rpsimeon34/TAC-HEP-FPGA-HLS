@@ -1,0 +1,200 @@
+
+
+================================================================
+== Vivado HLS Report for 'ex3'
+================================================================
+* Date:           Fri May 12 18:13:13 2023
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        Exercise3_apint
+* Solution:       solution1
+* Product family: kintex7
+* Target device:  xc7k160t-fbg484-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 6.811 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        9|        9| 90.000 ns | 90.000 ns |    9|    9|   none  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 10
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.72>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%b_V_read = call i6 @_ssdm_op_Read.ap_auto.i6(i6 %b_V)" [ex3apint.cpp:7]   --->   Operation 11 'read' 'b_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%a_V_read = call i6 @_ssdm_op_Read.ap_auto.i6(i6 %a_V)" [ex3apint.cpp:7]   --->   Operation 12 'read' 'a_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [10/10] (1.72ns)   --->   "%x_V = sdiv i6 %a_V_read, %b_V_read" [ex3apint.cpp:10]   --->   Operation 13 'sdiv' 'x_V' <Predicate = true> <Delay = 1.72> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 9> <II = 6> <Delay = 1.72> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 1.72>
+ST_2 : Operation 14 [9/10] (1.72ns)   --->   "%x_V = sdiv i6 %a_V_read, %b_V_read" [ex3apint.cpp:10]   --->   Operation 14 'sdiv' 'x_V' <Predicate = true> <Delay = 1.72> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 9> <II = 6> <Delay = 1.72> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 1.72>
+ST_3 : Operation 15 [8/10] (1.72ns)   --->   "%x_V = sdiv i6 %a_V_read, %b_V_read" [ex3apint.cpp:10]   --->   Operation 15 'sdiv' 'x_V' <Predicate = true> <Delay = 1.72> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 9> <II = 6> <Delay = 1.72> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 1.72>
+ST_4 : Operation 16 [7/10] (1.72ns)   --->   "%x_V = sdiv i6 %a_V_read, %b_V_read" [ex3apint.cpp:10]   --->   Operation 16 'sdiv' 'x_V' <Predicate = true> <Delay = 1.72> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 9> <II = 6> <Delay = 1.72> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 1.72>
+ST_5 : Operation 17 [6/10] (1.72ns)   --->   "%x_V = sdiv i6 %a_V_read, %b_V_read" [ex3apint.cpp:10]   --->   Operation 17 'sdiv' 'x_V' <Predicate = true> <Delay = 1.72> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 9> <II = 6> <Delay = 1.72> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 1.72>
+ST_6 : Operation 18 [5/10] (1.72ns)   --->   "%x_V = sdiv i6 %a_V_read, %b_V_read" [ex3apint.cpp:10]   --->   Operation 18 'sdiv' 'x_V' <Predicate = true> <Delay = 1.72> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 9> <II = 6> <Delay = 1.72> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 1.72>
+ST_7 : Operation 19 [4/10] (1.72ns)   --->   "%x_V = sdiv i6 %a_V_read, %b_V_read" [ex3apint.cpp:10]   --->   Operation 19 'sdiv' 'x_V' <Predicate = true> <Delay = 1.72> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 9> <II = 6> <Delay = 1.72> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 1.72>
+ST_8 : Operation 20 [3/10] (1.72ns)   --->   "%x_V = sdiv i6 %a_V_read, %b_V_read" [ex3apint.cpp:10]   --->   Operation 20 'sdiv' 'x_V' <Predicate = true> <Delay = 1.72> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 9> <II = 6> <Delay = 1.72> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 1.72>
+ST_9 : Operation 21 [2/10] (1.72ns)   --->   "%x_V = sdiv i6 %a_V_read, %b_V_read" [ex3apint.cpp:10]   --->   Operation 21 'sdiv' 'x_V' <Predicate = true> <Delay = 1.72> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 9> <II = 6> <Delay = 1.72> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 6.81>
+ST_10 : Operation 22 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i6 %a_V), !map !36"   --->   Operation 22 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 23 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i6 %b_V), !map !42"   --->   Operation 23 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 24 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i6* %c_V), !map !46"   --->   Operation 24 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([4 x i8]* @ex3_str) nounwind"   --->   Operation 25 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 26 [1/10] (1.72ns)   --->   "%x_V = sdiv i6 %a_V_read, %b_V_read" [ex3apint.cpp:10]   --->   Operation 26 'sdiv' 'x_V' <Predicate = true> <Delay = 1.72> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 9> <II = 6> <Delay = 1.72> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 27 [1/1] (2.39ns) (grouped into DSP with root node add_ln68)   --->   "%y_V = mul i6 %x_V, %a_V_read" [ex3apint.cpp:11]   --->   Operation 27 'mul' 'y_V' <Predicate = true> <Delay = 2.39> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 5.09> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 28 [1/1] (1.18ns)   --->   "%z_V = sub i6 %b_V_read, %a_V_read" [ex3apint.cpp:12]   --->   Operation 28 'sub' 'z_V' <Predicate = true> <Delay = 1.18> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 29 [1/1] (2.70ns) (root node of the DSP)   --->   "%add_ln68 = add i6 %y_V, %z_V" [ex3apint.cpp:13]   --->   Operation 29 'add' 'add_ln68' <Predicate = true> <Delay = 2.70> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 5.09> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 30 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i6P(i6* %c_V, i6 %add_ln68)" [ex3apint.cpp:13]   --->   Operation 30 'write' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 31 [1/1] (0.00ns)   --->   "ret void" [ex3apint.cpp:14]   --->   Operation 31 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.72ns
+The critical path consists of the following:
+	wire read on port 'b_V' (ex3apint.cpp:7) [8]  (0 ns)
+	'sdiv' operation ('x.V', ex3apint.cpp:10) [10]  (1.72 ns)
+
+ <State 2>: 1.72ns
+The critical path consists of the following:
+	'sdiv' operation ('x.V', ex3apint.cpp:10) [10]  (1.72 ns)
+
+ <State 3>: 1.72ns
+The critical path consists of the following:
+	'sdiv' operation ('x.V', ex3apint.cpp:10) [10]  (1.72 ns)
+
+ <State 4>: 1.72ns
+The critical path consists of the following:
+	'sdiv' operation ('x.V', ex3apint.cpp:10) [10]  (1.72 ns)
+
+ <State 5>: 1.72ns
+The critical path consists of the following:
+	'sdiv' operation ('x.V', ex3apint.cpp:10) [10]  (1.72 ns)
+
+ <State 6>: 1.72ns
+The critical path consists of the following:
+	'sdiv' operation ('x.V', ex3apint.cpp:10) [10]  (1.72 ns)
+
+ <State 7>: 1.72ns
+The critical path consists of the following:
+	'sdiv' operation ('x.V', ex3apint.cpp:10) [10]  (1.72 ns)
+
+ <State 8>: 1.72ns
+The critical path consists of the following:
+	'sdiv' operation ('x.V', ex3apint.cpp:10) [10]  (1.72 ns)
+
+ <State 9>: 1.72ns
+The critical path consists of the following:
+	'sdiv' operation ('x.V', ex3apint.cpp:10) [10]  (1.72 ns)
+
+ <State 10>: 6.81ns
+The critical path consists of the following:
+	'sdiv' operation ('x.V', ex3apint.cpp:10) [10]  (1.72 ns)
+	'mul' operation of DSP[13] ('y.V', ex3apint.cpp:11) [11]  (2.39 ns)
+	'add' operation of DSP[13] ('add_ln68', ex3apint.cpp:13) [13]  (2.7 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
